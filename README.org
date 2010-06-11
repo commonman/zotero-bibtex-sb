@@ -1,0 +1,53 @@
+#+TITLE: Improvements and Additions to Zotero's BibTeX Export
+
+* What This Is
+
+This repository contains a small number of tweaks to Zotero's existing BibTeX export facilities.  They are in the form of modified BibTeX translators which you can drop into your zotero/translators folder and use for export, keeping Zotero's existing BibTeX intact.
+
+It has no user interface, or preferences to set.  At the moment it's just a few modified versions of Zotero's standard BibTeX export file, which you can find in '[somedir]/zotero/translators/BibTeX.js'  If you want to change anything, you have to edit the Javascript yourself.  This is a little daunting if you've never done it before, but it's not rocket science either.  I hope in time to comment the files better to make them easier for you to make your own edits.
+
+My initial aim is just to make the modifications I have made available to anyone who finds them useful.  I'll also consider including modifications that other Zotero/BibTeX users find useful--- if necessary by creating multiple different BibTeX-Export files from which you can (here) select.
+
+This started because I couldn't find a BibTeX postprocessor that would meet my needs.  Nor did I really relish the thought of using one every time I update a few database entries and want to see the output in my PDF right away. 
+
+Because of the non standardized nature of BibTeX, Zotero's BibTeX export can't produce the perfect output for all users.  The choices for dealing with that are either to: find a BibTeX (.bst) file which handles Zotero's output and does what you want.  Tweak such a .bst file to handle all the data that Zotero gives it but still outputs only the data you want.  Postprocess your Zotero-exported BibTeX to get what you want or (what I have done here) go all the way back to the source and get Zotero to output BibTeX how you want it in the first place.  Many users will have to use some combination of these.  Follow your bliss.  This was mine.
+
+* The BibTeX Exporters
+
+A the moment there is only one.  This will hopefully quickly be expanded 'a few'.
+
+
+
+** BibTeX (Scot's Clean)
+
+This makes the following changes from Zotero's standard BibTeX export
+
+  - The qualitiy of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)
+      A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting approval.
+
+  - The ISBN field is not exported
+
+  - The ISBN field is not exported
+
+  - The url and is not exported.  This should be changed so that it works for web pages.  But for now it's omitted entirely. 
+
+  - The "pages" field is not exported for books
+    This is a change that should eventually make it into Zotero's standard BibTeX export
+
+  - The 'month' field is not exported for articles which have an issue number.  (Cf. for exmple Chicago Manual of Style 17.161--163)
+
+  - The lcc and  archive location fields are not exported
+
+  - The DOI field is not exported.
+
+It's easy enough to add any of these back in by uncommenting the appropriate lines in the BibTeX-ScotsClean.js file
+
+** To Use
+Drop them in your zotero/translators directory, which is usually within your firefox profile.  To find out where your zotero data directory is, look in:
+
+Zotero Preferences --> Advanced  --> Show Data Directory
+
+the 'translators' direcory is inside that.  When you restart firefox, the new export will be available in the list.
+
+ 
+
