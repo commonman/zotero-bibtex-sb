@@ -1,0 +1,39 @@
+--- BibTeX.js	2010-06-12 00:15:22.000000000 +0100
++++ BibTeX-proposed.js	2010-06-12 02:48:12.497513861 +0100
+@@ -1848,8 +1848,11 @@
+ }
+ 
+ var numberRe = /^[0-9]+/;
+-// this is a list of words that should not appear as part of the citation key
+-var citeKeyTitleBannedRe = /(\s+|\b)(a|an|from|does|how|it\'s|its|on|some|the|this|why)(\s+|\b)/g;
++// Below is a list of words that should not appear as part of the citation key
++// in includes the indefinite articles of English, German, French and Spanish, as well as a small set of English prepositions whose 
++// force is more grammatical than lexical, i.e. which are likely to strike many as 'insignificant'.
++// The assumption is that most who want a title word in their key would prefer the first word of significance.
++var citeKeyTitleBannedRe = /\b(a|an|the|some|from|on|in|to|of|do|with|der|die|das|ein|eine|einer|eines|einem|einen|un|une|la|le|l\'|el|las|los|al|uno|una|unos|unas|de|des|del|d\')(\s+|\b)/g;
+ var citeKeyConversionsRe = /%([a-zA-Z])/;
+ var citeKeyCleanRe = /[^a-z0-9\!\$\&\*\+\-\.\/\:\;\<\>\?\[\]\^\_\`\|]+/g;
+ 
+@@ -1862,7 +1865,7 @@
+     },
+     "t":function (flags, item) {
+         if (item["title"]) {
+-            return item["title"].toLowerCase().replace(citeKeyTitleBannedRe, "").split(" ")[0];
++            return item["title"].toLowerCase().replace(citeKeyTitleBannedRe, "").split(/\s+/g)[0];
+         }
+         return "";
+     },
+@@ -2033,9 +2036,10 @@
+ 			writeField("pages", item.pages.replace("-","--"));
+ 		}
+ 		
+-		if(item.numPages) {
+-			writeField("pages", item.numPages);
+-		}
++                // Commented out, because we don't want a books number of pages in the BibTeX "pages" field for books.
++		//if(item.numPages) {
++		//	writeField("pages", item.numPages);
++		//}
+ 		
+ 		if(item.itemType == "webpage") {
+ 			writeField("howpublished", item.url);
