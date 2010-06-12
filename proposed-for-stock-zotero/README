@@ -1,0 +1,19 @@
+This directory contains a set of changes proposed by me for Zotero's BibTeX
+translator.  (As opposed to its parent directory which contains a more
+heavily modified BibTeX translator which I am offering to users as a
+suppliment to Zotero's BibTeX translator.
+
+The BibTeX.js in this directory is from the Zotero development branch
+and is the current one, as of its file Modification Time.  It is here
+for convienience in creating patches and for comparison.  Browse the
+current version here: 
+
+https://www.zotero.org/trac/browser/extension/trunk/translators/BibTeX.js
+
+And download the file here:
+
+https://www.zotero.org/trac/export/6122/extension/trunk/translators/BibTeX.js
+
+
+
+The proposed modifications are in:  BibTeX-proposed.js

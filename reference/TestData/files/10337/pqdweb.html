@@ -1,0 +1,1051 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
+
+<meta name="wpd_version" content="0.2">
+<meta name="wpd_baseurl" content="http://proquest.umi.com/pqdweb?did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD">
+<meta name="wpd_url" content="http://proquest.umi.com/pqdweb?did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD">
+<meta name="wpd_date" content="2008-08-01T20:08Z">
+
+
+<!-- retrieve.vtpl -->
+
+		    	
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<title>Document View</title>
+<script language="JavaScript1.2" type="text/javascript" src="retrieve.js"></script>
+<script language="Javascript" type="text/javascript" src="scripts.js"></script>
+		
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+
+<script language="JavaScript" type="text/javascript" src="wave.js"></script> 
+
+	
+	
+	
+
+	
+<!--[if IE]>
+		<link rel="stylesheet" href="/html/common/ieonly.css?rv=200802" type="text/css" />
+<![endif]-->
+
+<script language="javascript" type="text/javascript" src="header.js"></script>
+<script language="javascript" type="text/javascript">
+
+var sessionID = "fklivz17-16a5x";
+function sessionHasChanged() 
+{
+	var sCC = getCookie("showncopyright");
+
+	if (sCC)
+		return (sCC != sessionID);
+	return true;
+}
+
+function showCopyright(pdfURL)
+{
+	if(sessionHasChanged()) {
+		document.cookie="showncopyright="+sessionID;
+		window.open("/pqdweb?RQT=500&pageName=diss_copyright.vtpl",'copypopup','menubar=no,toolbar=yes,location=no,status=no,scrollbars=yes,resizable=yes,height=400,width=540,left=150,top=0');
+	}
+	if (window.parent != null)
+		window.parent.window.location = pdfURL;
+	else
+		window.location = pdfURL;
+
+	return false;
+}
+
+</script>
+
+<!--[if lte IE 6]>
+<script language="JavaScript" type="text/javascript" src="/js/csshover.js"></script> 
+<script language="javascript" type="text/javascript">
+	// this must be after the include of csshover to get the right parseStylesheets funtion
+	AttachEvent(window, "load", parseStylesheets);
+</script>
+		<link rel="stylesheet" href="/html/common/ielte6.css?rv=200802" type="text/css" />
+<![endif]-->
+
+
+<!--[if IE]>
+<style type="text/css">
+   #moreLikeThisSection div.check input {
+		top:0px;
+  } 
+  
+	div.suppIcon {
+		cursor: hand;	/* for ie 5 */
+		margin-left:6px;
+	}
+  
+</style>
+<![endif]-->
+<script language="javascript">
+
+// The popup needs to know when the request to load a page has completed so it
+// can turn off the search animation. It will call setNewPage(false) then poll
+// isNewPage() to see when it turns true again.
+var b_isNewPage = true;
+function isNewPage() { return b_isNewPage; }
+function setNewPage(bNew) { b_isNewPage = bNew; }
+
+var accTaxPopup = null;
+	 function setAccTaxPopupHandle( handle ) {
+		if (handle)
+			accTaxPopup = handle;
+		return true;
+	 }
+
+	 
+</script>
+<script charset="utf-8" id="injection_graph_func" src="injection_graph_func.js"></script><script id="_nameHighlight_injection"></script><link class="skype_name_highlight_style" href="chrome://skype_ff_toolbar_win/content/injection_nh_graph.css" type="text/css" rel="stylesheet" charset="utf-8" id="_injection_graph_nh_css">
+<link rel="stylesheet" type="text/css" href="pqdweb.css" media="all">
+</head>
+<body id="docView">
+<div id="outer">
+<a name="top"></a>
+
+      
+  
+
+
+
+
+ 
+
+
+
+
+  
+    
+  
+
+
+    
+<script language="javascript" type="text/javascript">
+
+	var origLocation = "/pqdweb?did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD";
+    var resultsLocation = "/pqdweb?sid=0&firstIndex=0&RQT=511&TS=1220299712&clientId=69356";
+	
+function chooseLang() {
+			var newLocation = origLocation;
+				if (!(origLocation.match(/skip=1/i))) {
+    	if(origLocation.match(/RQT=305/i) || origLocation.match(/RQT=512/i)) {
+          newLocation = resultsLocation;
+        }
+	}    	
+
+	if(origLocation.match(/RQT=535/i)) {
+	  newLocation = "/pqdweb?RQT=534&TS=1220299712&clientId=69356";
+	}
+	
+		if(newLocation.match(/lang=/))
+	{
+		    newLocation = newLocation.replace(/lang=(.*)/, "lang=" + document.languageForm.lang.options[document.languageForm.lang.selectedIndex].value);
+	}
+	else
+	{
+	    newLocation = newLocation + "&" + "lang" + "=" + document.languageForm.lang.options[document.languageForm.lang.selectedIndex].value;
+	}
+
+   	window.location = newLocation;
+}
+
+var M_SEARCH = 0,
+	M_ADVANCED = 1,
+	M_PUB = 2,
+	M_MARKED_LEFT = 3,
+	M_MARKED = 4,
+	M_MARKED_RIGHT = 5,
+	M_RESULTS = 6,
+	M_SPATH = 7,
+	M_TOPIC = 8, 
+	M_BROWSE = 9;
+	
+
+function encodeUriComponent(str) {
+    var re = /\s/g;
+    str = str.replace(re, "%20");
+    var re = /\"/g;
+    str = str.replace(re, "&quot;");
+    re = /\#/g;
+    str = str.replace(re, "%23");
+    re = /&/g;
+    str = str.replace(re, "%26");
+    re = /\//g;
+    str = str.replace(re, "%2F");
+    re = /:/g;
+    str = str.replace(re, "%3A");
+    return str;
+}
+
+function chooseDB(element,lastSrchMode, prevIndex) {
+			var origLocation = window.location.href;
+		// alert("origLocation [" + origLocation + "]");	
+	var newLocation = origLocation;
+	var xsq = "";
+    var savingParams = 0;
+    
+    if(origLocation.match(/RQT=305/i) || origLocation.match(/RQT=512/i)) {
+      newLocation = "/pqdweb?sid=0&firstIndex=0&RQT=511&TS=1220299712&clientId=69356";
+    }
+    
+	// if there was no ?, we need to add one
+	if(!(origLocation.match(/\?/)))
+	{
+								var defRQT = "306";
+		if(document.frmAdvancedSrch)
+			defRQT = "403";
+		newLocation = origLocation + "?RQT="+defRQT+"&TS=1220299712";
+	} else {
+	  	  	  if(!origLocation.match(/RQT/i)){
+		var defRQT = "306";
+		if(document.frmAdvancedSrch)
+			defRQT = "403";
+		newLocation = origLocation + "&RQT="+defRQT+"&TS=1220299712";
+	  }
+	}
+
+
+        var internalLocation = "/pqdweb";
+
+    var qs = "did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD";
+    if ( qs != "" ) {
+        internalLocation = internalLocation + "?" + qs;
+    }
+    if ( internalLocation.match(/RQT=301/i) ||
+         internalLocation.match(/RQT=302/i) ||
+         internalLocation.match(/RQT=304/i) ||
+         internalLocation.match(/RQT=504/i) ) {
+        switch ( lastSrchMode ) {
+                                    case 2:
+            newLocation = internalLocation.replace(/RQT=\d+/i, "RQT=403");
+            break;
+            case 1:
+            default:
+            newLocation = internalLocation.replace(/RQT=\d+/i, "RQT=306");
+            break;
+        }
+                newLocation = newLocation.replace(/UserId=([^&]+)/i, "");
+        newLocation = newLocation.replace(/Passwd=([^&]+)/i, "");
+    }
+
+    // alert("BEFORE 574 check [" + newLocation + "]");
+            if ( newLocation.match(/RQT=574/i) ) {
+        newLocation = newLocation.replace(/PQDCounter=([^&]+)/, "");
+        newLocation = newLocation.replace(/HNPCounter=([^&]+)/, "");
+    }
+    // alert("AFTER 574 check [" + newLocation + "]");
+
+		if(newLocation.match(/DBId=/))
+	{
+	newLocation = newLocation.replace(/DBId=([^&]+)/, "DBId=" + element.options[element.selectedIndex].value);    
+	if(newLocation.match(/TpLogin/))
+	  {
+	    newLocation = newLocation.replace(/DBId=[^&]*&/, "");
+	    	  }
+	
+	}
+	else
+	{
+	    	    newLocation = newLocation + "&" + "DBId" + "=" + element.options[element.selectedIndex].value;
+	}
+	if(newLocation.match(/TpLogin%3D/))
+	{   var redirUrl;
+	    redirUrl = element.options[element.selectedIndex].value;
+	    	    element.options[prevIndex].selected = 1;  	    popupNewWindow(unescape(redirUrl));
+	    return;  	}
+	else
+	{
+	   	}
+	
+	// If Multiple databases is selected from the drop down
+	// then take to the Collections page
+	if(element.options[element.selectedIndex].value == "-1"){
+	newLocation = "/pqdweb?RQT=573&LASTSRCHMODE="+lastSrchMode;
+	}
+
+    newLocation = newLocation.replace(/#sform/, "");
+    newLocation = newLocation.replace(/#more/, "");
+    newLocation = newLocation.replace(/saved=[^&]*/,"");
+    newLocation = newLocation.replace(/xsq=[^&]*/,"");
+    newLocation = newLocation.replace(/xsq1=[^&]*/,"");
+    newLocation = newLocation.replace(/xsq2=[^&]*/,"");
+    newLocation = newLocation.replace(/xsq3=[^&]*/,"");
+    newLocation = newLocation.replace(/xsq4=[^&]*/,"");
+    newLocation = newLocation.replace(/xsq5=[^&]*/,"");
+    newLocation = newLocation.replace(/xsq6=[^&]*/,"");
+    newLocation = newLocation.replace(/xFO=[^&]*/,"");
+    newLocation = newLocation.replace(/xFO1=[^&]*/,"");
+    newLocation = newLocation.replace(/xFO2=[^&]*/,"");
+    newLocation = newLocation.replace(/xFO3=[^&]*/,"");
+    newLocation = newLocation.replace(/xFO4=[^&]*/,"");
+    newLocation = newLocation.replace(/xFO5=[^&]*/,"");
+    newLocation = newLocation.replace(/xFO6=[^&]*/,"");
+    newLocation = newLocation.replace(/xOP1=[^&]*/,"");
+    newLocation = newLocation.replace(/xOP2=[^&]*/,"");
+    newLocation = newLocation.replace(/xOP3=[^&]*/,"");
+    newLocation = newLocation.replace(/xOP4=[^&]*/,"");
+    newLocation = newLocation.replace(/xOP5=[^&]*/,"");
+    newLocation = newLocation.replace(/xOP6=[^&]*/,"");
+    
+    if(document.frmBasicSrch)
+    {
+      xsq = document.frmBasicSrch.SQ.value;
+      // alert("xsq [" + xsq + "]");
+
+      if (xsq != "") {
+        xsq = encodeUriComponent(xsq);
+        // alert("encoded xsq [" + xsq + "]");
+
+        savingParams = 1;
+        newLocation = newLocation + "&xsq=" + xsq;
+      }
+    }
+  else if(document.frmAdvancedSrch)
+  {
+    var xsqArray = new Array(10);  
+    var xfoArray = new Array(10);  
+    var xopArray = new Array(10);  
+    xsqArray[0] = document.frmAdvancedSrch.SQ.value;
+    xsqArray[1] = document.frmAdvancedSrch.SQ1.value;
+    xsqArray[2] = document.frmAdvancedSrch.SQ2.value;
+    if(document.frmAdvancedSrch.SQ3) {
+        xsqArray[3] = document.frmAdvancedSrch.SQ3.value;
+    } else {xsqArray[3] = "";}
+    if(document.frmAdvancedSrch.SQ4) {
+        xsqArray[4] = document.frmAdvancedSrch.SQ4.value;
+    } else {xsqArray[4] = "";}
+    if(document.frmAdvancedSrch.SQ5) {
+        xsqArray[5] = document.frmAdvancedSrch.SQ5.value;
+    } else {xsqArray[5] = "";}
+    if(document.frmAdvancedSrch.SQ6) {
+        xsqArray[6] = document.frmAdvancedSrch.SQ6.value;
+    } else {xsqArray[6] = "";}
+            if (document.frmAdvancedSrch.FO.options) {
+        xfoArray[0] = document.frmAdvancedSrch.FO.options[document.frmAdvancedSrch.FO.selectedIndex].value;
+    } else if (document.frmAdvancedSrch.FO) {
+        xfoArray[0] = document.frmAdvancedSrch.FO.value;
+    } else {
+        xfoArray[0] = "";
+    }
+    if (document.frmAdvancedSrch.FO1.options) {
+        xfoArray[1] = document.frmAdvancedSrch.FO1.options[document.frmAdvancedSrch.FO1.selectedIndex].value;
+    } else if (document.frmAdvancedSrch.FO1) {
+        xfoArray[1] = document.frmAdvancedSrch.FO1.value;
+    } else {
+        xfoArray[1] = "";
+    }
+    if (document.frmAdvancedSrch.FO2.options) {
+        xfoArray[2] = document.frmAdvancedSrch.FO2.options[document.frmAdvancedSrch.FO2.selectedIndex].value;
+    } else if (document.frmAdvancedSrch.FO2) {
+        xfoArray[2] = document.frmAdvancedSrch.FO2.value;
+    } else {
+        xfoArray[2] = "";
+    }
+    if(document.frmAdvancedSrch.OP3) {
+        if (document.frmAdvancedSrch.FO3.options) {
+            xfoArray[3] = document.frmAdvancedSrch.FO3.options[document.frmAdvancedSrch.FO3.selectedIndex].value;
+        } else if (document.frmAdvancedSrch.FO3) {
+            xfoArray[3] = document.frmAdvancedSrch.FO3.value;
+        } else {
+            xfoArray[3] = "";
+        }
+    } else { xfoArray[3] = ""; }
+    if(document.frmAdvancedSrch.OP4) {
+        if (document.frmAdvancedSrch.FO4.options) {
+            xfoArray[4] = document.frmAdvancedSrch.FO4.options[document.frmAdvancedSrch.FO4.selectedIndex].value;
+        } else if (document.frmAdvancedSrch.FO4) {
+            xfoArray[4] = document.frmAdvancedSrch.FO4.value;
+        } else {
+            xfoArray[4] = "";
+        }
+    } else { xfoArray[4] = ""; }
+    if(document.frmAdvancedSrch.OP5) {
+        if (document.frmAdvancedSrch.FO5.options) {
+            xfoArray[5] = document.frmAdvancedSrch.FO5.options[document.frmAdvancedSrch.FO5.selectedIndex].value;
+        } else if (document.frmAdvancedSrch.FO5) {
+            xfoArray[5] = document.frmAdvancedSrch.FO5.value;
+        } else {
+            xfoArray[5] = "";
+        }
+    } else { xfoArray[5] = ""; }
+    if(document.frmAdvancedSrch.OP6) {
+        if (document.frmAdvancedSrch.FO6.options) {
+            xfoArray[6] = document.frmAdvancedSrch.FO6.options[document.frmAdvancedSrch.FO6.selectedIndex].value;
+        } else if (document.frmAdvancedSrch.FO6) {
+            xfoArray[6] = document.frmAdvancedSrch.FO6.value;
+        } else {
+            xfoArray[6] = "";
+        }
+    } else { xfoArray[6] = ""; }
+            xopArray[0] = "";
+    xopArray[1] = document.frmAdvancedSrch.OP1.options[document.frmAdvancedSrch.OP1.selectedIndex].value;
+    xopArray[2] = document.frmAdvancedSrch.OP2.options[document.frmAdvancedSrch.OP2.selectedIndex].value;
+    if(document.frmAdvancedSrch.OP3) {
+      xopArray[3] = document.frmAdvancedSrch.OP3.options[document.frmAdvancedSrch.OP3.selectedIndex].value;
+    } else {xopArray[3] = "";}
+    if(document.frmAdvancedSrch.OP3) {
+      xopArray[4] = document.frmAdvancedSrch.OP4.options[document.frmAdvancedSrch.OP4.selectedIndex].value;
+    } else {xopArray[4] = "";}
+    if(document.frmAdvancedSrch.OP3) {
+      xopArray[5] = document.frmAdvancedSrch.OP5.options[document.frmAdvancedSrch.OP5.selectedIndex].value;
+    } else {xopArray[5] = "";}
+    if(document.frmAdvancedSrch.OP3) {
+      xopArray[6] = document.frmAdvancedSrch.OP6.options[document.frmAdvancedSrch.OP6.selectedIndex].value;
+    } else {xopArray[6] = "";}
+    
+	for(i = 0; i < 7; i++) {
+	  if(xsqArray[i] != null && xsqArray[i] != "") {
+      
+        savingParams = 1;
+        xsqArray[i] = encodeUriComponent(xsqArray[i]);
+        xopArray[i] = encodeUriComponent(xopArray[i]);
+
+        switch(i) {
+          case 0:     
+            newLocation = newLocation + "&xsq=" + xsqArray[i] + "&xFO=" + xfoArray[i]; 
+            break;
+          case 1:
+            newLocation = newLocation + "&xsq1=" + xsqArray[i] + "&xFO1=" + xfoArray[i] + "&xOP1=" + xopArray[i]; 
+            break;
+          case 2:
+            newLocation = newLocation + "&xsq2=" + xsqArray[i] + "&xFO2=" + xfoArray[i] + "&xOP2=" + xopArray[i]; 
+            break;
+          case 3:
+            newLocation = newLocation + "&xsq3=" + xsqArray[i] + "&xFO3=" + xfoArray[i] + "&xOP3=" + xopArray[i]; 
+            break;
+          case 4:
+            newLocation = newLocation + "&xsq4=" + xsqArray[i] + "&xFO4=" + xfoArray[i] + "&xOP4=" + xopArray[i]; 
+            break;
+          case 5:
+            newLocation = newLocation + "&xsq5=" + xsqArray[i] + "&xFO5=" + xfoArray[i] + "&xOP5=" + xopArray[i]; 
+            break;
+          case 6:
+            newLocation = newLocation + "&xsq6=" + xsqArray[i] + "&xFO6=" + xfoArray[i] + "&xOP6=" + xopArray[i];       
+            break;
+        }
+         
+	  } 	} 	 
+
+     
+  }    if(savingParams != 0) {
+     newLocation = newLocation + "&saved=1";
+   }
+
+    newLocation = newLocation.replace(/&+/g, "&");
+		    var from = "http://proquest.umi.com/login";
+	from = from.replace("/","\/");
+    var to = "http://proquest.umi.com/pqdweb";
+	to = to.replace("/","\/");	
+	newLocation = newLocation.replace(from, to);
+	
+	//alert("newLocation [" + newLocation + "]");
+	var sformRegExp = /sform$/;
+	if(newLocation.match(sformRegExp) || newLocation.match(/more$/)) {
+	    window.location = newLocation;
+	}
+	else {
+    	window.location = newLocation+"#sform";
+    }
+}
+
+function displayLink(mypage, isWarnUser, isNewWindow) {
+   if ( isWarnUser ) {
+       NewWindow('/pqdweb?RQT=323&popup=1&link='+mypage+'&nw='+isNewWindow, 350, 150, mypage, isNewWindow);
+       return;
+    }
+    if ( isNewWindow ) { 
+      //window.location.href="/pqdweb?RQT=323";
+      popupNewWindow(mypage);
+   } else {
+      //window.location.href="/pqdweb?RQT=323";
+      window.top.location.href=mypage; 
+   }
+   return false;
+}
+
+function NewWindow(mypage, w, h, link, bool) {
+   if ( w !=0 && h != 0 ) {
+      LeftPosition = (screen.width) ? (screen.width-w)/2 : 0;
+      TopPosition = (screen.height) ? (screen.height-h)/2 : 0;
+      settings = 'height='+h+',width='+w+',top='+TopPosition+',left='+LeftPosition+',scrollbars='+scroll+',resizable'
+      win = window.open(mypage,"LogoutAlert",settings)
+   } else {
+      win = window.open(mypage,"LibraryLink")
+   }
+   win.opener = self;
+}
+var winW;			// window width
+var winH;			// window height
+
+function popupNewWindow(URL_string) {
+	// Get window width and height
+	if (parseInt(navigator.appVersion)>3) {
+		if (navigator.appName=="Netscape") {
+			winW = window.innerWidth - 60;
+			winH = window.innerHeight - 80;
+		}
+		if (navigator.appName.indexOf("Microsoft")!=-1) {
+			winW = document.body.offsetWidth - 60;
+			winH = document.body.offsetHeight - 80;
+		}
+	}
+	newWindow = window.open(URL_string,'newWindow','menubar=yes,toolbar=yes,location=yes,status=yes,scrollbars=yes,resizable=yes,height=' + winH + ',width=' + winW + ',left=50,top=50');
+}
+
+var myresearchfolder = new Image();
+myresearchfolder.src = "/images/common/small_folder.gif";
+var myresearchfolder1 = new Image();
+myresearchfolder1.src = "/images/common/small_folder1.gif";
+function swapfolder(s)
+{
+	var oimg = document.getElementById("img_small_folder");
+	if (oimg)
+	{
+		oimg.src = eval("myresearchfolder"+s+".src");
+	}
+}
+</script>	
+  
+<div id="pageBanner">
+	
+  <div id="logoLine">
+                  
+      
+              
+            
+            
+                       <span>
+        <a href="http://proquest.umi.com/pqdweb?RQT=306&TS=1220299712&clientId=69356">
+    
+        <img id="pageLogo" src="logo_proquest.gif" title="ProQuest" alt="ProQuest" border="0" width="114" height="27"></a>
+      </span>
+          	    <span><a href="http://proquest.umi.com/pqdweb?did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD&int=1"><img src="spacer.gif" alt="Text Only Interface" title="Text Only Interface" border="0" width="1" height="1"></a></span>
+		<span class="opposite textSmall bold"><a href="javascript:void(0);" class="help" onclick='helpWindow("/i-std/en/dis/article/artdisplay.htm");' name="HelpLink">Help&nbsp;<span class="hidden">(new window)</span></a>&nbsp;&nbsp;</span>
+	    	
+	<div class="clear"><!-- --></div>
+  </div>
+
+  <form name="marked" action="http://proquest.umi.com/pqdweb?did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD" style="border: 0pt none ; margin: 0pt; padding: 0pt;">
+    <input name="numMarked" value="1" type="hidden">
+  </form>
+  <table id="unknown" border="0" cellpadding="0" cellspacing="0" width="100%">
+  <tbody><tr valign="bottom">
+    <td width="99%">
+		<div id="navtabs">
+		  <ul>
+			<li id="nav-basic">
+				<a href="http://proquest.umi.com/pqdweb?RQT=306&TS=1220299712&clientId=69356" title="Basic Search">Basic</a>
+			</li>
+			<li id="nav-advanced">
+				<a href="http://proquest.umi.com/pqdweb?RQT=403&TS=1220299712&clientId=69356" title="Advanced Search">Advanced</a>
+			</li>
+   			     									
+															
+						  
+						
+                            			  									  
+						
+			<li id="nav-browse">
+				<a href="http://proquest.umi.com/pqdweb?RQT=325&TS=1220299712&clientId=69356" title="Browse by subject or location">Browse</a>  
+			</li>	
+						
+						<li id="nav-myresearch" style="text-align: center;" onmouseover="swapfolder('1')" onmouseout="swapfolder('')"><a href="http://proquest.umi.com/pqdweb?RQT=532&TS=1220299712&clientId=69356" title="View your documents, searches, and visited publications."><img id="img_small_folder" src="small_folder.gif" alt="" border="0" width="17" height="10"> My Research<br><span class="MarkedCountContainer"><u id="MarkedCountSpan">1 marked item</u></span></a></li>
+					  </ul>
+		</div> <!-- navTabs -->
+	</td>
+        <td align="right" valign="bottom">
+       <form name="languageForm" method="get" action="javascript:if(parent.frames.length!=0){parent.frames[0].chooseLang()}else{chooseLang()}">
+          <table align="right" border="0" cellpadding="0" cellspacing="1">
+            <tbody><tr>
+              <td class="textSmall" align="left" valign="bottom" nowrap="nowrap"><span style="font-size: 0.85em; font-family: Verdana,Geneva,Arial,Helvetica,sans-serif; color: rgb(128, 128, 128);"><label for="lang">Interface language:</label></span>
+              </td>
+            </tr>
+			<tr>
+			  <td class="textSmall" align="right" valign="bottom" nowrap="nowrap">
+				<select name="lang" id="lang" onfocusin="SelectOnFocusIn()" onfocus="SelectOnFocus()">
+				      <option value="ar">&#1575;&#1604;&#1604;&#1594;&#1577; &#1575;&#1604;&#1593;&#1585;&#1576;&#1610;&#1577;</option>
+      <option value="de">Deutsch</option>
+      <option value="en" selected="selected">English</option>
+      <option value="es">Espa&ntilde;ol</option>
+      <option value="fr">Fran&ccedil;ais</option>
+      <option value="zh-TW">&#20013;&#25991;( &#32321;&#39636; )&lrm;</option>
+      <option value="zh-CN">&#20013;&#25991;( &#31616;&#20307; )&lrm;</option>
+      <option value="ko">&#54620;&#44397;&#50612;</option>
+      <option value="in">Bahasa Indonesia</option>
+      <option value="it">Italiano</option>
+      <option value="hu">Magyar</option>
+      <option value="ja">&#26085;&#26412;&#35486;</option>
+      <option value="no">Norsk</option>
+      <option value="pl">Polski</option>
+      <option value="pt">Portugu&ecirc;s</option>
+      <option value="ru">&#1056;&#1091;&#1089;&#1089;&#1082;&#1080;&#1081;</option>
+      <option value="th">&#3616;&#3634;&#3625;&#3634;&#3652;&#3607;&#3618;</option>
+      <option value="tr">T&uuml;rk&ccedil;e</option>
+  				</select>
+			  </td>
+                <td align="right" valign="top" nowrap="nowrap">
+					<div class="button buttonSecondary"><input value="Go" title="Go" class="buttonTransparent" type="submit"></div>               </td>
+			</tr>
+          </tbody></table>
+       </form>
+	</td>
+      </tr>
+</tbody></table>
+</div> <!-- end of pageBanner -->
+
+
+<div style="width: 3px; height: 3px;"><!-- --></div><div id="pageBody">
+  	
+      <div id="selDBLinkLine" class="textSmall">
+		<div class="left">
+<!-- DATABASES SELECTED BEGIN -->
+		<table><tbody><tr><td nowrap="nowrap">
+		<span class="left">
+        <a href="http://proquest.umi.com/pqdweb?RQT=573&TS=1220299712&clientId=69356&LASTSRCHMODE=1" title="Select a different combination of databases to search.">Databases selected:</a>&nbsp;
+        </span>
+        <span class="engContent right">
+
+                          Dissertations & Theses
+        		</span>
+		</td></tr></tbody></table>
+<!-- DATABASES SELECTED END -->
+		</div>
+                  		<div class="right nodisplayPrint">
+			<a href="http://www.zoomerang.com/Survey/?p=WEB2284DXGEJ34" target="PQWhatsNew"></a>
+		</div>
+	  	  
+	  	  	  <div class="clear"><!-- --></div>
+  </div>
+
+  <form action="http://proquest.umi.com/pqdweb?did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD" name="article" style="margin: 0px; padding: 0px;">
+  <table style="margin: 3px 0pt 12px;" border="0" cellpadding="3" cellspacing="0" width="100%">
+  <tbody><tr>
+          <td><h1 class="inline">Document View</h1></td>
+		
+	      	
+<script language="javascript">
+
+<!--
+function displaySelection(selectElement) {
+    for (var i=0; i < selectElement.options.length; i++) 
+        if (selectElement.options[i].selected)
+            url = selectElement.options[i].value;
+
+    if (url != "dummy")
+        top.location.href=url;
+}
+
+
+function MarkList(whichchk)
+    {
+     var markedsofar=parseInt(document.marked.numMarked.value,10);
+    if (whichchk.checked)
+        {
+        if (1 == 50)
+            {
+            alert("There are already 50 documents marked.");
+            whichchk.checked = false;
+
+            return;             
+            }
+        chk = 1;
+        markedsofar=markedsofar+1;
+        whichchk.checked = true;
+        //to make sure if another checkbox is checked as well
+         for(var i=0;i<document.article.marked.length;i++){
+            if(!document.article.marked[i].checked){
+                document.article.marked[i].checked=true;
+            }
+         }
+        }
+    else {
+        chk = 0;
+        markedsofar=markedsofar - 1;
+        whichchk.checked = false;
+         for(var i=0;i<document.article.marked.length;i++){
+            if(document.article.marked[i].checked){
+                document.article.marked[i].checked=false;
+            }
+         }
+
+    }
+    document.marked.numMarked.value=markedsofar;
+
+    var timeNow = new Date();
+        var qrystring = "/pqdweb?RQT=530&markedListInfo=";
+    var markedInfo = "key%3Ddid%253D747071131%26retrieveGroup%3D0%26VType%3DPQD%26VInst%3DPROD%26VName%3DPQD%26mark%3D"+chk;
+    qrystring += markedInfo + "&";
+    qrystring += "a="+timeNow.getTime();
+
+    if(whichchk.checked){
+    x = new Image();    
+    x.src = qrystring;
+   } else{
+    y = new Image();    
+    y.src = qrystring;
+   }
+      updateBannerMarkedCount(markedsofar);
+    }
+
+function updateBannerMarkedCount(numMarked) {
+      count = null;
+    if (document.all) {
+        count = document.all["MarkedCountSpan"];
+    } else if (document.getElementById) {
+        count = document.getElementById("MarkedCountSpan");
+    }
+
+    if (count) {
+        artString="$numMarked marked items";
+        if (numMarked == 1) {
+            artString="$numMarked marked item";
+        }
+        count.innerHTML = artString.replace(/\$numMarked/, numMarked);
+    }
+  }
+
+function changePage(index) {
+    var temp = '/pqdweb?RQT=309&Fmt=2&VType=PQD&VName=PQD&VInst=PROD&TS=1220299712&clientId=69356&did=747071131&startPage='+index;
+  //alert(temp);
+  window.parent.location.href = temp;
+  return false;
+}
+function NewRefWin(link) {
+  parent.refWindow=window.open(link, "_REFPAGE", 
+                               'toolbar=no,location=no,directories=no,status=no,scrollbars=yes,resizable=1,width=760,height=450');
+  try {
+		  parent.refWindow.focus();
+	} catch(e) {}
+}
+
+function newPQFTOWin(link) {
+  parent.refWindow=window.open(link, 'PqddFtoWin');
+  try {
+	  parent.refWindow.focus();
+	} catch(e) {}
+
+  return false;
+}
+
+function openCiteWin(sURL)
+{
+	sURL += "&fromjs=1";		var citeWin = window.open(sURL, "citeWin", 'height=350,width=700,top=100,left=150,toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=yes');
+	citeWin.focus();
+	return false;	// don't use the href
+}
+
+function openCopyWin(sURL)
+{
+	sURL += "&fromjs=1";
+	var copyWin = window.open(sURL, "copyWin", 'height=200,width=700,top=100,left=150,toolbar=no,menubar=no,scrollbars=yes,resizable=yes,location=no,directories=no,status=yes');
+	copyWin.focus();
+	return false;
+}
+
+//-->
+</script>
+ 
+
+
+
+	
+         		
+			   		<td class="textSmall">
+			
+			
+													
+   		    				</td>
+		<td class="textSmall" align="right">
+																	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>		
+		<td class="textSmall" style="padding-right: 10px;" align="right">
+							  	       	         <img src="x.gif" width="40" height="14"> 
+	       	       
+		   		              
+		   													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       	       	           <img src="x.gif" width="40" height="14"> 
+  	         	    				</td>
+	</tr>
+				
+			<tr class="rowMarkedNavBar">
+			<td colspan="2">
+				<span class="textMedium" style="white-space: nowrap;">
+		          							<a href="http://proquest.umi.com/pqdweb?vinst=PROD&fmt=2&startpage=-1&clientid=69356&vname=PQD&RQT=309&did=747071131&scaling=FULL&vtype=PQD&rqt=309&TS=1220299712&clientId=69356&cc=1&TS=1220299712" title="Print"><img src="printicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?vinst=PROD&fmt=2&startpage=-1&clientid=69356&vname=PQD&RQT=309&did=747071131&scaling=FULL&vtype=PQD&rqt=309&TS=1220299712&clientId=69356&cc=1&TS=1220299712" title="Print">Print</a>
+									  				
+		  				&nbsp;|&nbsp;<a href="http://proquest.umi.com/pqdweb?RQT=563&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&otherFmt=2" title="Email"><img src="emailicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?RQT=563&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&otherFmt=2" title="Email">Email</a>
+						  
+		  			&nbsp;|&nbsp;<a href="http://proquest.umi.com/pqdweb?RQT=569&curl=http%3A%2F%2Fproquest.umi.com%2Fpqdweb%3Fdid%3D747071131%26Fmt%3D7%26clientId%3D69356%26RQT%3D309%26VName%3DPQD&TS=1220299712" target="copyWin" title="Copy link"><img src="linkicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?RQT=569&curl=http%3A%2F%2Fproquest.umi.com%2Fpqdweb%3Fdid%3D747071131%26Fmt%3D7%26clientId%3D69356%26RQT%3D309%26VName%3DPQD&TS=1220299712" target="copyWin" title="Copy link">Copy link</a>
+			
+		  			&nbsp;|&nbsp;<a href="http://proquest.umi.com/pqdweb?RQT=568&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&TS=1220299712" target="citeWin" title="Cite this"><img src="citeicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?RQT=568&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&TS=1220299712" target="citeWin" title="Cite this">Cite this</a>
+		  		
+				
+        						    		&nbsp;|&nbsp;<input id="mark2" name="marked" value="key%3Ddid%253D747071131%26retrieveGroup%3D0%26VType%3DPQD%26VInst%3DPROD%26VName%3DPQD%26mark%3D" checked="checked" onclick="MarkList(this);" type="checkbox"> <label for="mark2">Mark Document</label>
+				</span>
+			</td>
+		
+	 <td class="textSmall" colspan="2" align="right">
+				    		<!-- translationform.inc --> <!-- docLanguage is set to [$docLanguage] -->
+   <div style="margin-right: 6px;">
+				  <label for="translang">Translate abstract from:</label>&nbsp;
+					    			<select id="translang" name="translang" onchange="doTranslation('/pqdweb?vinst=PROD&fmt=7&clientid=69356&vname=PQD&RQT=309&did=747071131&scaling=FULL&vtype=PQD&rqt=309&TS=1220299712&clientId=69356');" onfocusin="SelectOnFocusIn()" onfocus="SelectOnFocus()">
+    				<option value="#" selected="1">Select language</option>
+    				<option value="en|zh-cn">English to Chinese (Simplified)</option>
+    				<option value="en|zh-tw">English to Chinese (Traditional)</option>
+    				<option value="en|fr">English to French</option>
+    				<option value="en|de">English to German</option>
+    				<option value="en|it">English to Italian</option>
+    				<option value="en|ja">English to Japanese</option>
+    				<option value="en|ko">English to Korean</option>									                      
+    				<option value="en|pt">English to Portuguese</option>
+    				<option value="en|ru">English to Russian</option>
+    				<option value="en|es">English to Spanish</option>
+    				<option value="en|tr">English to Turkish</option>
+																								</select>					
+				</div>
+   				  </td>
+	</tr>
+		</tbody></table>				
+
+    
+  <div class="engContent">
+
+	
+					
+		
+	
+		
+	
+
+	
+		
+			
+		<div id="formatBoxContainer">
+										<div class="textMedium formatBox brightBox langDir">
+					<div style="padding-bottom: 8px;"><b>Other available formats:</b></div>
+    
+	
+          	 
+     		 	
+	  
+	
+          	 
+     
+	 			<div class="formatOption">
+    	<a href="https://secure.umi.com/dissertations/cart?add=8919684&track=pq&dlnow=1">
+			<img src="ft_opt.gif" alt="Order a Copy" align="absmiddle" border="0"></a>
+			<a href="https://secure.umi.com/dissertations/cart?add=8919684&track=pq&dlnow=1" title="Order a Copy">Order a Copy</a>
+	</div>
+		  
+  
+			</div>
+			
+						
+						    									        	            	<div id="moreLikeThisSection" class="formatBox clearBox"><span class="moreTitle textMedium">Find more documents like this:</span><div class="wrapper"> <div id="SUBMLTLabelDiv" class="textMedium heading">Subjects:</div><div id="SUBMLTValueDiv" class="textMedium value"><div class="check"><input name="moreLikeThis" value=" SUB(Religion) " id="SUBMLTCheckBox0" type="checkbox"> 
+ <label for="SUBMLTCheckBox0">Religion<wbr></label> 
+</div><div class="check"><input name="moreLikeThis" value=" SUB(Theology) " id="SUBMLTCheckBox1" type="checkbox"> 
+ <label for="SUBMLTCheckBox1">Theology<wbr></label> 
+</div><div class="check"><input name="moreLikeThis" value=" SUB(Ancient languages) " id="SUBMLTCheckBox2" type="checkbox"> 
+ <label for="SUBMLTCheckBox2">Ancient languages<wbr></label> 
+</div><div class="check"><input name="moreLikeThis" value=" SUB(Bible) " id="SUBMLTCheckBox3" type="checkbox"> 
+ <label for="SUBMLTCheckBox3">Bible<wbr></label> 
+</div></div> <div id="AUMLTLabelDiv" class="textMedium heading more">Author(s):</div><div id="AUMLTValueDiv" class="textMedium value more"><div class="check"><input name="moreLikeThis" value=" AU(Cook, Joan Elizabeth) " id="AUMLTCheckBox0" type="checkbox"> 
+ <label for="AUMLTCheckBox0">Cook, Joan Elizabeth</label> 
+</div></div> <div id="DEGDTMLTLabelDiv" class="textMedium heading more">Degree Date:</div><div id="DEGDTMLTValueDiv" class="textMedium value more"><div class="check"><input name="moreLikeThis" value=" DEGDT(1989) " id="DEGDTMLTCheckBox0" type="checkbox"> 
+ <label for="DEGDTMLTCheckBox0">1989<wbr></label> 
+</div></div> <div id="ADMLTLabelDiv" class="textMedium heading more">Advisor:</div><div id="ADMLTValueDiv" class="textMedium value more"><div class="check"><input name="moreLikeThis" value=" AD(Harrelson, Walter) " id="ADMLTCheckBox0" type="checkbox"> 
+ <label for="ADMLTCheckBox0">Harrelson,<wbr> Walter</label> 
+</div></div> <div id="SCMLTLabelDiv" class="textMedium heading more">School:</div><div id="SCMLTValueDiv" class="textMedium value more"><div class="check"><input name="moreLikeThis" value=" SC(Vanderbilt University) " id="SCMLTCheckBox0" type="checkbox"> 
+ <label for="SCMLTCheckBox0">Vanderbilt<wbr> University<wbr></label> 
+</div></div> <div id="SOMLTLabelDiv" class="textMedium heading more">Publication title:</div><div id="SOMLTValueDiv" class="textMedium value more"><div class="check"><input name="moreLikeThis" value=" SO(ProQuest Dissertations and Theses) " id="SOMLTCheckBox0" type="checkbox"> 
+ <label for="SOMLTCheckBox0">ProQuest Dissertatio<wbr>ns and Theses<wbr></label> 
+</div></div><div class="textMedium" id="ShowMoreMLT" style="padding-top: 5px;"><a href="javascript:showMLTMore();">More options</a><a class="arrow" href="javascript:showMLTMore();"> &darr;</a></div><table style="padding-top: 15px;" border="0" cellpadding="0" cellspacing="0"><tbody><tr>  <td nowrap="nowrap"><div class="button buttonPrimary"><input value="Search" title="Search" class="buttonTransparent" onclick="searchMoreLikeThis()" type="button"></div></td>  <td nowrap="nowrap"><div class="button buttonSecondary"><input value="Clear" title="Clear" class="buttonTransparent" onclick="resetMoreLikeThis()" type="button"></div></td></tr></tbody></table><span class="textMedium" id="CloseMoreMLT" style="padding-top: 9px; padding-left: 2px; visibility: hidden; display: none;"><a href="javascript:hideMLTMore();">close</a><a class="arrow" href="javascript:hideMLTMore();"> &uarr;</a></span></div></div>
+        	</div>
+		
+<div id="docHolder">
+
+	<!-- retrieve_doc.inc -->
+                <script type="text/javascript" language="javascript">setRequestString("pqdweb?RQT=305");</script><div class="docCitationContainer"><!--pm_type is set to Dissertation--><!--Start CITATION--><a name="citation"></a><div class="headerBlack"><strong>The Song of Hannah: Text and contexts</strong></div><div class="textMedium">        by        <a onclick='return searchSideWays("AU","Cook, Joan Elizabeth");' href="javascript:void(0);"><em>Cook, Joan Elizabeth</em></a>, Ph.D., <span class="bold">Vanderbilt University</span>, 1989, 228 pages; AAT 8919684</div><table border="0" cellpadding="2" cellspacing="0"></table><!--End CITATION--></div>        <div style="width: 12px; height: 12px;"><!-- --></div>    
+		<a name="summary"></a><!--Start ABSTRACT--><a name="abstract"></a><div class="docSection" style="padding-top: 4px; padding-left: 4px;"><span class="textSmall"><strong>Abstract (Summary)</strong></span><div class="textMedium"><p style="margin-top: 0px;">The Song of Hannah (1 Sam 2:1-10) contains several key features that invite study from various perspectives. The project addresses these: the issue of the best available text, its dates of composition and of insertion into the book of Samuel, its genre and poetic features; and on a larger scale the Song's interaction with its narrative context and the appearance of its archetypal "barren mother" imagery in Second Isaiah. Methodologically, the study applies text-critical principles to the various versions of the Song, and compares its linguistic and thematic features with those of archaic poems and Deuteronomistic passages in Joshua-2 Kings. It then analyzes form-critical aspects of the Song and examines its poetic features. Then the project applies typic and thematic approaches to the Song's immediate and larger contexts: to the birth-of-Samuel account in 1 Sam 1:1-2:21, to 1 and 2 Samuel, and to Isaiah 40-55. The study concludes that the Song, a general hymn of praise, may well have been composed as early as the tenth century B.C.E., and was inserted into the narrative toward the end of the monarchy by editors with priestly interests. The Song's position early in the books of Samuel, and its theme of divine protection of the needy during times of transition, using "barren mother" imagery, celebrates the ultimate rule of the Deity in the lives of individuals and in affairs of state, and sets the theocratic tone for the incipient monarchy. In a later transitional time, Second Isaiah's archetypal "barren mother" imagery celebrates the divine protection of Jerusalem on the verge of return to the Land at the end of the exile. These conclusions suggest that further study of later versions and appropriations of the Song, such as in Targum Jonathan, Pseudo-Philo and the Magnificat (Luke 1:46-55), would demonstrate the continuing significance of both theme and imagery.</p></div></div><!--End ABSTRACT-->    <!--APGDissertation--><input value="305" name="RQT" type="hidden"><input name="SQ" type="hidden"><input value="PQ" name="querySyntax" type="hidden">                <input value="1220299712" name="TS" type="hidden"><a name="supplemental"></a>													
+		<div class="docSection"><div class="docBar textSmall langDir"><a name="indexing"></a><strong>Indexing (document details)</strong></div></div><table id="tableIndexTerms" border="0" cellpadding="4" cellspacing="1"><tbody><tr><td class="textSmall" valign="top"><strong>Advisor:</strong></td><td class="textSmall engContent" align="left" valign="top"><a href="javascript:void(0);" onclick='return searchSideWays("AD","Harrelson, Walter");'>Harrelson, Walter</a></td></tr><tr><td class="textSmall" valign="top"><strong>School:</strong></td><td class="textSmall engContent" align="left" valign="top">Vanderbilt University</td></tr><tr><td class="textSmall" valign="top"><strong>School Location:</strong></td><td class="textSmall engContent" align="left" valign="top">United States -- Tennessee</td></tr><tr><td class="textSmall" valign="top"><strong>Source:</strong></td><td class="textSmall engContent" align="left" valign="top">DAI-A 50/06, p. 1687, Dec 1989</td></tr><!--Source Type--><tr><td class="textSmall" valign="top" nowrap="nowrap"><strong>Source type:</strong></td><td class="textSmall engContent" align="left" valign="top">Dissertation</td></tr><!--Source Type--><!--Start INDEX TERMS--><tr><td class="textSmall" valign="top" nowrap="nowrap"><strong>Subjects:</strong></td><td class="textSmall engContent" align="left" valign="top"><a href="javascript:void(0);" onclick='return searchSideWays("SUB","Religion");'>Religion</a>,&nbsp;<a href="javascript:void(0);" onclick='return searchSideWays("SUB","Theology");'>Theology</a>,&nbsp;<a href="javascript:void(0);" onclick='return searchSideWays("SUB","Ancient languages");'>Ancient languages</a>,&nbsp;<a href="javascript:void(0);" onclick='return searchSideWays("SUB","Bible");'>Bible</a></td></tr><!--End INDEX TERMS--><tr><td class="textSmall" valign="top" nowrap="nowrap"><strong>Publication Number:</strong></td><td class="textSmall engContent" align="left" valign="top">          AAT 8919684</td></tr><!--Start ARTICLE URL--><tr><td class="textSmall" valign="top" nowrap="nowrap"><strong>Document URL:</strong></td><td class="textSmall engContent" align="left" valign="top"><span id="wrapURL2">http://proquest<wbr>.umi<wbr>.com/pqdweb<wbr>?did=747071131<wbr>&Fmt=7<wbr>&clientId=69356<wbr>&RQT=309<wbr>&VName=PQD</span></td><script type="text/javascript" language="javascript">fixURL("wrapURL2", 'http://proquest.umi.com/pqdweb?did=747071131&Fmt=7&clientId=69356&RQT=309&VName=PQD')</script></tr><!--End ARTICLE URL--><!--Start DOCID--><tr><td class="textSmall" valign="top" nowrap="nowrap"><strong>ProQuest document ID:</strong></td><td class="textSmall engContent" align="left" valign="top">747071131</td></tr><!--End DOCID--></tbody></table><img src="spacer.gif" border="0" width="1" height="10"><br><br><!--Start MORE LIKE THIS--><script type="text/javascript" language="javascript">    setSubjectName('Subjects:');              var nysubArray=new Array();var nyperArray=new Array();var nygeoArray=new Array();var nycoArray=new Array();var nycreativeWorkArray=new Array();   var subArray=new Array("Religion","Theology","Ancient languages","Bible");var geoArray=new Array();var perArray=new Array();var coArray=new Array();var meshArray=new Array();var ccArray=new Array();var naicsArray=new Array();var tickerArray=new Array();var sicArray=new Array(); var dunsArray=new Array();var relcoArray=new Array();var prodArray=new Array();var auArray=new Array("Cook, Joan Elizabeth");var atArray=new Array();var laArray=new Array();var depArray=new Array();var cmtArray=new Array();var scArray=new Array("Vanderbilt University");var adArray=new Array("Harrelson, Walter");var degdtArray=new Array("1989");var ifArray=new Array();var soArray=new Array("ProQuest Dissertations and Theses");var cricollArray=new Array();var clcArray=new Array();var spArray=new Array();var leArray=new Array();var ftArray=new Array();var segArray=new Array();</script><!--End MORE LIKE THIS-->
+    
+</div>
+
+   	<script language="javascript" type="text/javascript">
+
+	var sHTML = "";
+	var oMore = document.getElementById("moreLikeThisSection");
+	if ( (typeof subArray == "undefined") && (typeof nysubArray == "undefined") ||
+		( (subArray.length == 0) && (meshArray.length == 0)&& (ccArray.length == 0)&& (geoArray.length == 0)&& (perArray.length == 0) && (coArray.length == 0) && (relcoArray.length == 0) && (prodArray.length == 0) && (atArray.length == 0) && (laArray.length == 0) && (scArray.length == 0) && (adArray.length == 0) && (degdtArray.length == 0) && (ifArray.length == 0) && (soArray.length == 0) && (cricollArray.length == 0) && (clcArray.length == 0)
+		                         && (nysubArray.length == 0) && (nygeoArray.length == 0) && (nyperArray.length == 0) && (nycoArray.length == 0) )) {
+		if (oMore)
+			oMore.style.display = "none"; 
+		oMore = null;
+	}
+	
+	if (oMore) {
+    	sHTML += '<span class="moreTitle textMedium">';
+		sHTML += "Find more documents like this:"; 		sHTML += '</span>';
+    	sHTML += '<div class="wrapper">';
+    	
+    	sHTML += generateMLT(subjectName, "SUB", subArray);
+    	sHTML += generateMLT(subjectName, "NYSUB", nysubArray);		
+    	sHTML += generateMLT('MeSH subjects:', "MESH", meshArray);
+    	sHTML += generateMLT('Classification Codes', "CC", ccArray);
+    	sHTML += generateMLT('Locations:', "GEO", geoArray);
+		sHTML += generateMLT('Locations:', "NYGEO", nygeoArray);
+    	sHTML += generateMLT('People:', "PER", perArray);
+		sHTML += generateMLT('People:', "NYPER", nyperArray);
+		sHTML += generateMLT('Author(s):', "AU", auArray);
+        sHTML += generateMLT('Companies:', "CO", coArray);
+		sHTML += generateMLT('Companies:', "NYCO", nycoArray);
+        sHTML += generateMLT('NAICS:', "NAICS", naicsArray);
+		sHTML += generateMLT('DUNS:', "DUNS", dunsArray);
+		sHTML += generateMLT('Ticker:', "TICKER", tickerArray);
+		sHTML += generateMLT('Sic:', "SIC", sicArray);
+    	sHTML += generateMLT('Related companies:', "RELCO", relcoArray);
+    	sHTML += generateMLT('Product Names:', "PROD", prodArray);
+		sHTML += generateMLT('Speaker(s):', "SP", spArray);
+		sHTML += generateMLT('Lecture/Series:', "LECTURE", leArray);
+		sHTML += generateMLT('Market Segment: ', "SEG", segArray);
+		sHTML += generateMLT('File type', "FILETYPE", ftArray);	
+    	sHTML += generateMLT('Document types:', "AT", atArray);
+    	sHTML += generateMLT('Degree Date:', "DEGDT", degdtArray);
+        sHTML += generateMLT('Language:', "LA", laArray);
+		sHTML += generateMLT('Advisor:', "AD", adArray);
+    	sHTML += generateMLT('Committee members:', "CMT", cmtArray);
+    	sHTML += generateMLT('School:', "SC", scArray);
+		sHTML += generateMLT('Department:', "DEP", depArray);
+    	sHTML += generateMLT('Keyword(s):', "IF", ifArray);
+    	sHTML += generateMLT('Publication title:', "SO", soArray);
+    	sHTML += generateMLT('Collection:', "CRICOLL", cricollArray);
+    	sHTML += generateMLT('Collection:', "CLC", clcArray);
+    
+    	sHTML += '<div class="textMedium" id="ShowMoreMLT" style="padding-top:5px;"><a href="javascript:showMLTMore();">More options</a><a class="arrow" href="javascript:showMLTMore();"> &darr;</a></div>';
+		
+    	sHTML += '<table cellspacing="0" cellpadding="0" border="0" style="padding-top:15px;">';
+    	sHTML += '<tr>';
+		sHTML += '  <td nowrap><div class="button buttonPrimary"><input type="button" value="Search" title="Search" class="buttonTransparent"  onclick="searchMoreLikeThis()" /></div></td>';
+		sHTML += '  <td nowrap><div class="button buttonSecondary"><input type="button" value="Clear" title="Clear" class="buttonTransparent"  onclick="resetMoreLikeThis()" /></div></td>';
+    	sHTML += '</tr>';
+    	sHTML += '</table>';
+
+		sHTML += '<span class="textMedium" id="CloseMoreMLT" style="padding-top:9px;padding-left:2px;visibility:hidden; display:none;"><a href="javascript:hideMLTMore();">close</a><a class="arrow" href="javascript:hideMLTMore();"> &uarr;</a></span>';
+    	sHTML += '</div>'; 		oMore.innerHTML = sHTML;
+		if (initialMLTField == "") { 
+			hideElement("ShowMoreMLT"); 
+			hideElement("CloseMoreMLT");
+		}
+	}
+</script>
+
+
+
+
+  <div style="width: 12px; height: 0px; clear: both;"><!-- --></div>
+</div> <!-- end of engContent -->
+<table style="clear: both;" border="0" cellpadding="3" cellspacing="0" width="100%">
+  			 
+
+
+
+	
+         		
+					
+			<tbody><tr class="rowMarkedNavBar">
+			<td colspan="2">
+				<span class="textMedium" style="white-space: nowrap;">
+		          							<a href="http://proquest.umi.com/pqdweb?vinst=PROD&fmt=2&startpage=-1&clientid=69356&vname=PQD&RQT=309&did=747071131&scaling=FULL&vtype=PQD&rqt=309&TS=1220299712&clientId=69356&cc=1&TS=1220299712" title="Print"><img src="printicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?vinst=PROD&fmt=2&startpage=-1&clientid=69356&vname=PQD&RQT=309&did=747071131&scaling=FULL&vtype=PQD&rqt=309&TS=1220299712&clientId=69356&cc=1&TS=1220299712" title="Print">Print</a>
+									  				
+		  				&nbsp;|&nbsp;<a href="http://proquest.umi.com/pqdweb?RQT=563&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&otherFmt=2" title="Email"><img src="emailicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?RQT=563&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&otherFmt=2" title="Email">Email</a>
+						  
+		  			&nbsp;|&nbsp;<a href="http://proquest.umi.com/pqdweb?RQT=569&curl=http%3A%2F%2Fproquest.umi.com%2Fpqdweb%3Fdid%3D747071131%26Fmt%3D7%26clientId%3D69356%26RQT%3D309%26VName%3DPQD&TS=1220299712" target="copyWin" title="Copy link"><img src="linkicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?RQT=569&curl=http%3A%2F%2Fproquest.umi.com%2Fpqdweb%3Fdid%3D747071131%26Fmt%3D7%26clientId%3D69356%26RQT%3D309%26VName%3DPQD&TS=1220299712" target="copyWin" title="Copy link">Copy link</a>
+			
+		  			&nbsp;|&nbsp;<a href="http://proquest.umi.com/pqdweb?RQT=568&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&TS=1220299712" target="citeWin" title="Cite this"><img src="citeicon.gif" align="absbottom" border="0"></a> <a href="http://proquest.umi.com/pqdweb?RQT=568&VInst=PROD&VName=PQD&VType=PQD&Fmt=7&did=747071131&TS=1220299712" target="citeWin" title="Cite this">Cite this</a>
+		  		
+				
+        						    		&nbsp;|&nbsp;<input id="mark1" name="marked" value="key%3Ddid%253D747071131%26retrieveGroup%3D0%26VType%3DPQD%26VInst%3DPROD%26VName%3DPQD%26mark%3D" checked="checked" onclick="MarkList(this);" type="checkbox"> <label for="mark1">Mark Document</label>
+				</span>
+			</td>
+		
+	 <td class="textSmall" colspan="2" align="right">
+		    	                             <a href="http://proquest.umi.com/pqdweb?RQT=318&pmid=66569&Tab=3&TS=1220299712&clientId=69356&VInst=PROD&VName=PQD&VType=PQD">Publisher Information</a>
+    		    	    	  </td>
+	</tr>
+			<tr><td class="textSmall" style="padding-top: 8px; padding-bottom: 8px;"><span class="bold">^</span> <a href="#top">Back to Top</a></td>
+		   		<td class="textSmall">
+			
+			
+													
+   		    				</td>
+		<td class="textSmall" align="right">
+																	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					</td>		
+		<td class="textSmall" style="padding-right: 10px;" align="right">
+							  	       	         <img src="x.gif" width="40" height="14"> 
+	       	       
+		   		              
+		   													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       	       	           <img src="x.gif" width="40" height="14"> 
+  	         	    				</td>
+	</tr>
+	</tbody></table>				
+
+    </form>
+
+	</div> 	<div class="push"></div>
+</div> 
+
+ 
+
+<div id="copyrightBody" class="textSmall">
+		<div id="copyrightLines">
+
+      Copyright &copy;
+      2008
+      ProQuest LLC.
+      All rights reserved.
+                    <a class="nodisplayPrint" href="http://www.il.proquest.com/go/termsandconditions" target="tccorpwin">Terms and Conditions</a>
+      	</div>
+	                		<div id="copyrightADA">
+                      <a class="nodisplayPrint" href="http://proquest.umi.com/pqdweb?did=747071131&Fmt=7&int=1&clientId=69356&RQT=309&VName=PQD">Text-only interface</a>
+		  		</div>
+                          <div>
+            
+          </div>
+                	<div id="copyrightLogos">
+        <a href="http://www.proquest.com/" target="tccorpwin"><img src="logo_frompq.gif" alt="ProQuest" border="0" width="150" height="40"></a>
+      
+          </div>
+</div>	</body>
+</html>

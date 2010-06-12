@@ -1,0 +1,442 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:bib="http://purl.org/net/biblio#"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#"
+ xmlns:link="http://purl.org/rss/1.0/modules/link/">
+    <bib:Article rdf:about="http://www.jstor.org/stable/4174965">
+        <dc:date>Oct., 1967</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://www.jstor.org/stable/4174965</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Notes on Transitivity and Theme in English: Part 2</dc:title>
+        <dcterms:dateSubmitted>2010-03-04 23:58:13</dcterms:dateSubmitted>
+        <dcterms:isPartOf rdf:resource="urn:issn:00222267"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>M. A. K.</foaf:givenname>
+                        <foaf:surname>Halliday</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>199-244</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+        <z:libraryCatalog>JSTOR</z:libraryCatalog>
+        <z:shortTitle>Notes on Transitivity and Theme in English</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:00222267">
+        <prism:number>2</prism:number>
+        <prism:volume>3</prism:volume>
+        <dc:identifier>ISSN 00222267</dc:identifier>
+        <dc:title>Journal of Linguistics</dc:title>
+    </bib:Journal>
+    <bib:Book rdf:about="#item_64">
+        <dc:date>1970</dc:date>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Bruges</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Desclée De Brouwer</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:subject>3_partial_copy</dc:subject>
+        <dc:title>Témoignage de l'évangile de Luc</dc:title>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:identifier>4</dc:identifier>
+                <dc:title>Pour une histoire de Jésus</dc:title>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Béda</foaf:givenname>
+                        <foaf:surname>Rigaux</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <z:itemType>book</z:itemType>
+    </bib:Book>
+    <bib:Book rdf:about="urn:isbn:3865725716">
+        <dc:date>2005</dc:date>
+        <dc:identifier>ISBN 3865725716</dc:identifier>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Hamburg</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Philo</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:title>"Licht zur Erleuchtung der Heiden und Herrlichkeit für dein Volk Israel" Studien zum lukanischen Doppelwerk</dc:title>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:identifier>151</dc:identifier>
+                <dc:title>Bonner biblische Beiträge</dc:title>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Christoph Gregor</foaf:givenname>
+                        <foaf:surname>Müller</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <z:itemType>book</z:itemType>
+    </bib:Book>
+    <bib:Article rdf:about="http://search.ebscohost.com/login.aspx?direct=true&amp;db=rfh&amp;AN=ATLA0000776992&amp;site=ehost-live">
+        <dc:date>1979 January 01, 1979</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://search.ebscohost.com/login.aspx?direct=true&amp;db=rfh&amp;AN=ATLA0000776992&amp;site=ehost-live</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>The Gospel of Mark as Narrative Christology.</dc:title>
+        <dcterms:abstract>This essay investigates the narrative composition of the Gospel of Mark, especially those aspects of composition which make it a continuous, developing story and shape this story to influence the readers. The significance of these aspects of composition for the Gospel's presentation of Jesus Christ is emphasized. The importance of the commissions given to Jesus and the disciples is brought out, and the role relationships of Jesus to four significant groups are investigated. These relationships are developed in Mark through reiterative enrichment or through new, sometimes surprising developments. Attention is given to patterns of related scenes and to other compositional techniques which indicate emphasis and evaluation of characters and events. This includes study of the patterned use of paradox, irony, and enticement to false hope in connection with the passion announcements and passion story. There are suggestions as to the possible function of these compositional features in the author's communication with his readers.</dcterms:abstract>
+        <dcterms:dateSubmitted>2010-05-27 14:11:58</dcterms:dateSubmitted>
+        <dcterms:isPartOf rdf:resource="urn:issn:0095-571X"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Robert C.</foaf:givenname>
+                        <foaf:surname>Tannehill</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>57-95</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+        <z:libraryCatalog>EBSCOhost</z:libraryCatalog>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0095-571X">
+        <prism:number>16</prism:number>
+        <dc:identifier>ISSN 0095-571X</dc:identifier>
+        <dc:title>Semeia</dc:title>
+    </bib:Journal>
+    <bib:Article rdf:about="http://search.ebscohost.com/login.aspx?direct=true&amp;db=rfh&amp;AN=ATLA0000860034&amp;site=ehost-live">
+        <dc:date>Ap 1992 April 01, 1992</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://search.ebscohost.com/login.aspx?direct=true&amp;db=rfh&amp;AN=ATLA0000860034&amp;site=ehost-live</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>0002</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:title>Studies in Luke-Acts : retrospect and prospect.</dc:title>
+        <dcterms:dateSubmitted>2010-04-23 07:49:07</dcterms:dateSubmitted>
+        <dcterms:isPartOf rdf:resource="urn:issn:0017-8160"/>
+        <dcterms:isReferencedBy rdf:resource="#item_127"/>
+        <dcterms:isReferencedBy rdf:resource="#item_128"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>François</foaf:givenname>
+                        <foaf:surname>Bovon</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>175-196</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+        <z:libraryCatalog>EBSCOhost</z:libraryCatalog>
+        <z:shortTitle>Studies in Luke-Acts</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0017-8160">
+        <prism:number>2</prism:number>
+        <prism:volume>85</prism:volume>
+        <dc:identifier>ISSN 0017-8160</dc:identifier>
+        <dc:title>Harvard Theological Review</dc:title>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_128">
+        <rdf:value>&lt;p>And this is sample annotation number two.&lt;/p></rdf:value>
+    </bib:Memo>
+    <bib:Memo rdf:about="#item_127">
+       <rdf:value>&lt;p>This is sample annotation number one&lt;/p></rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="http://links.jstor.org/sici?sici=0010-0994%28200007%2962%3A6%3C696%3AIRALTO%3E2.0.CO%3B2-Y">
+        <dc:date>Jul., 2000</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://links.jstor.org/sici?sici=0010-0994%28200007%2962%3A6%3C696%3AIRALTO%3E2.0.CO%3B2-Y</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:subject>LIN</dc:subject>
+        <dc:subject>theory</dc:subject>
+        <dc:title>Integrating Rhetorical and Literary Theories of Genre</dc:title>
+        <dcterms:dateSubmitted>2007-09-12 15:22:17</dcterms:dateSubmitted>
+        <dcterms:isPartOf rdf:resource="urn:issn:00100994"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Amy J</foaf:givenname>
+                        <foaf:surname>Devitt</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>696-718</bib:pages>
+        <link:link rdf:resource="#item_125"/>
+        <z:itemType>journalArticle</z:itemType>
+        <z:libraryCatalog>JSTOR</z:libraryCatalog>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:00100994">
+        <prism:number>6</prism:number>
+        <prism:volume>62</prism:volume>
+        <dc:identifier>ISSN 00100994</dc:identifier>
+        <dc:title>College English</dc:title>
+    </bib:Journal>
+    <z:Attachment rdf:about="#item_125">
+        <dc:title>SamplePDF.pdf</dc:title>
+        <link:type>application/pdf</link:type>
+        <rdf:resource rdf:resource="files/125/SamplePDF.pdf"/>
+        <z:itemType>attachment</z:itemType>
+    </z:Attachment>
+    <bib:Article rdf:about="#item_1019">
+        <dc:date>1984</dc:date>
+        <dc:subject>LIN</dc:subject>
+        <dc:title>El anuncio del angel y la objeción de María.</dc:title>
+        <dcterms:abstract>The author applies his theory of a literary pattern for heavenly announcements of birth and mission in biblical literature to Luke's account of the annunciation (see Est Bib Ns 42 no 1-2,21-70 1984). In this article the author concentrates on the role of Mary's objection as a literary device for eliciting a reaffirmation of the message from the heavenly messenger. [tr fr j by TDS].</dcterms:abstract>
+        <dcterms:isPartOf rdf:resource="urn:issn:0014-1437"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Salvador</foaf:givenname>
+                        <foaf:surname>Muñoz Iglesias</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>315 - 362</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0014-1437">
+        <prism:number>3-4</prism:number>
+        <prism:volume>42</prism:volume>
+        <dc:identifier>ISSN 0014-1437</dc:identifier>
+        <dc:title>Estudios bíblicos</dc:title>
+    </bib:Journal>
+    <bib:Article rdf:about="#item_1417">
+        <dc:date>1992</dc:date>
+        <dc:title>La distinción entre acontecimiento-base artificio literario en los relatos derásicos : Una discusión con el Prof Muñoz Iglesias en su obra "Los Evangelios de la Infancia"</dc:title>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:number>1-4</prism:number>
+                <prism:volume>50</prism:volume>
+                <dc:identifier>ISSN 0014-1437</dc:identifier>
+                <dc:title>Estudios bíblicos</dc:title>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Domingo</foaf:givenname>
+                        <foaf:surname>Muñoz León</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>123 - 148</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+    </bib:Article>
+    <bib:Thesis rdf:about="http://proquest.umi.com/pqdweb?did=747071131&amp;Fmt=7&amp;clientId=69356&amp;RQT=309&amp;VName=PQD">
+        <dc:date>1989</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://proquest.umi.com/pqdweb?did=747071131&amp;Fmt=7&amp;clientId=69356&amp;RQT=309&amp;VName=PQD</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:publisher>
+            <foaf:Organization>
+               <foaf:name>Vanderbilt University</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:title>The Song of Hannah: Text and contexts</dc:title>
+        <dcterms:dateSubmitted>2008-09-01 20:08:27</dcterms:dateSubmitted>
+        <dcterms:isReferencedBy rdf:resource="#item_9318"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Joan Elizabeth</foaf:givenname>
+                        <foaf:surname>Cook</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_10337"/>
+        <z:itemType>thesis</z:itemType>
+        <z:libraryCatalog>ProQuest</z:libraryCatalog>
+        <z:shortTitle>The Song of Hannah</z:shortTitle>
+        <z:type>PhD</z:type>
+    </bib:Thesis>
+    <bib:Memo rdf:about="#item_9318">
+        <rdf:value>&lt;p>The Song of Hannah (1 Sam 2:1-10) contains several key features that invite study from various perspectives. The project addresses these: the issue of the best available text, its dates of composition and of insertion into the book of Samuel, its genre and poetic features; and on a larger scale the Song&amp;apos;s interaction with its narrative context and the appearance of its archetypal &amp;quot;barren mother&amp;quot; imagery in Second Isaiah. Methodologically, the study applies text-critical principles to the various versions of the Song, and compares its linguistic and thematic features with those of archaic poems and Deuteronomistic passages in Joshua-2 Kings. It then analyzes form-critical aspects of the Song and examines its poetic features. Then the project applies typic and thematic approaches to the Song&amp;apos;s immediate and larger contexts: to the birth-of-Samuel account in 1 Sam 1:1-2:21, to 1 and 2 Samuel, and to Isaiah 40-55. The study concludes that the Song, a general hymn of praise, may well have been composed as early as the tenth century B.C.E., and was inserted into the narrative toward the end of the monarchy by editors with priestly interests. The Song&amp;apos;s position early in the books of Samuel, and its theme of divine protection of the needy during times of transition, using &amp;quot;barren mother&amp;quot; imagery, celebrates the ultimate rule of the Deity in the lives of individuals and in affairs of state, and sets the theocratic tone for the incipient monarchy. In a later transitional time, Second Isaiah&amp;apos;s archetypal &amp;quot;barren mother&amp;quot; imagery celebrates the divine protection of Jerusalem on the verge of return to the Land at the end of the exile. These conclusions suggest that further study of later versions and appropriations of the Song, such as in Targum Jonathan, Pseudo-Philo and the Magnificat (Luke 1:46-55), would demonstrate the continuing significance of both theme and imagery.&lt;/p></rdf:value>
+    </bib:Memo>
+    <z:Attachment rdf:about="#item_10337">
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://proquest.umi.com/pqdweb?did=747071131&amp;Fmt=7&amp;clientId=69356&amp;RQT=309&amp;VName=PQD</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>Document View</dc:title>
+        <dcterms:dateSubmitted>2008-09-01 20:08:33</dcterms:dateSubmitted>
+        <link:charset>25</link:charset>
+        <link:type>text/html</link:type>
+        <rdf:resource rdf:resource="files/10337/pqdweb.html"/>
+        <z:itemType>attachment</z:itemType>
+    </z:Attachment>
+    <bib:BookSection rdf:about="urn:isbn:0253208696">
+        <prism:edition>1st Midland Book</prism:edition>
+        <dc:date>1994, c1990</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://nrs.harvard.edu/urn-3:hul.ebookbatch.ACLS_batch:MIU01000000000000005840858</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Bloomington</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Indiana University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:title>Intentio Lectoris: The State of the Art</dc:title>
+        <dcterms:dateSubmitted>2010-06-03 10:45:28</dcterms:dateSubmitted>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dc:identifier>ISBN 0253208696</dc:identifier>
+                <dc:title>The Limits of Interpretation</dc:title>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                       <dc:title>Advances in Semiotics</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Umberto</foaf:givenname>
+                        <foaf:surname>Eco</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>44-63</bib:pages>
+        <z:itemType>bookSection</z:itemType>
+    </bib:BookSection>
+    <bib:BookSection rdf:about="urn:isbn:3795401127%20(pbk.)">
+        <dc:date>1981</dc:date>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>München</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Schnell &amp; Steiner</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:title>Geshichten als Theologie und Verkündigung---  die Prologe des Mattäus- und Lukas-Evangeliums</dc:title>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dc:identifier>ISBN 3795401127 (pbk.)</dc:identifier>
+                <dc:title>Zur Theologie der Kindheitsgeschichten : der heutige Stand der Exegese</dc:title>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Schriftenreihe der Katholischen Akademie der Erzdiözese Freiburg</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Peter</foaf:givenname>
+                        <foaf:surname>Fíedler</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Rudolf</foaf:givenname>
+                        <foaf:surname>Pesch</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <bib:pages>11-26</bib:pages>
+        <z:itemType>bookSection</z:itemType>
+    </bib:BookSection>
+    <bib:Document rdf:about="http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf">
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:subject>OT</dc:subject>
+        <dc:title>Lohfink Bibliography</dc:title>
+        <dcterms:dateSubmitted>2007-04-13 08:37:37</dcterms:dateSubmitted>
+        <dcterms:isPartOf>
+           <z:Website><dc:title>Bibliography</dc:title></z:Website>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Norbert</foaf:givenname>
+                        <foaf:surname>Lohfink</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <link:link rdf:resource="#item_4145"/>
+        <z:itemType>webpage</z:itemType>
+    </bib:Document>
+    <z:Attachment rdf:about="#item_4145">
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:title>lohfinkbibliogr.pdf</dc:title>
+        <dcterms:dateSubmitted>2007-04-13 08:37:38</dcterms:dateSubmitted>
+        <link:charset>25</link:charset>
+        <link:type>application/pdf</link:type>
+        <rdf:resource rdf:resource="files/4145/lohfinkbibliogr.pdf"/>
+        <z:itemType>attachment</z:itemType>
+    </z:Attachment>
+</rdf:RDF>
