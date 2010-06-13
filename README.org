@@ -12,6 +12,10 @@ This started because I couldn't find a BibTeX postprocessor that would meet my n
 
 Because of the non standardized nature of BibTeX, Zotero's BibTeX export can't produce the perfect output for all users.  The choices for dealing with that are either to: find a BibTeX (.bst) file which handles Zotero's output and does what you want.  Tweak such a .bst file to handle all the data that Zotero gives it but still outputs only the data you want.  Postprocess your Zotero-exported BibTeX to get what you want or (what I have done here) go all the way back to the source and get Zotero to output BibTeX how you want it in the first place.  Many users will have to use some combination of these.  Follow your bliss.  This was mine.
 
+Feel free to contact me with any comments:
+
+scot dot becker at gmail dot com
+
 * The BibTeX Exporters
 
 ** BibTeX (Low-Fat)
@@ -41,6 +45,8 @@ This makes the following changes from Zotero's standard BibTeX export:
 
   - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)  (A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting approval.)
 
+  - Exported Zotero tags are no longer LaTeX escaped.  This makes them easier to read and search.
+
 It's easy enough to add any of these back in by uncommenting the appropriate lines in the BibTeX-LowCal.js file
 
 ** Notes
@@ -62,8 +68,12 @@ the 'translators' directory is inside that.  When you restart Firefox, the new e
 
  + Add the ability to specify what fields do/don't get exported as a variable at the top of the file
 
- + Add a link to the attached files in Zotero's storage directory
 
+ + Remove HTML markup from 'notes' field.  At the moment, I get ugly LaTeXification of HTML.  With junk like this:  {\textless}p{\textgreater}
+
+** Wish I could do but probably can't
+
+ + Add a link to the attached files in Zotero's storage directory.  I've looked at the code for this in a few other exporters, but I can't grok it.  If anyone has any ideas how to add this, I'd be happy to hear about it. 
 
 ** Alternatives to this approach
 
