@@ -14,31 +14,35 @@ Because of the non standardized nature of BibTeX, Zotero's BibTeX export can't p
 
 * The BibTeX Exporters
 
-A the moment there is only one.  This will hopefully quickly be expanded to 'a few'.
+** BibTeX (Low-Fat)
 
+This makes the following changes from Zotero's standard BibTeX export:
 
+1)  Some fields are not exported.  This is to prevent eager BibTeX styles from adding them to your citations.  
 
-** BibTeX (Scot's Clean)
+   + ISBN
 
-This makes the following changes from Zotero's standard BibTeX export
+   + ISSN
 
-  - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)
-      A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting approval.
+   + Library of Congress catalogue number ('lccn')
 
-  - The ISBN field is not exported
+   + DOI
 
-  - The ISBN field is not exported
+2)  Some fields are exported only under certain conditions:
 
-  - The url and is not exported.  This should be changed so that it works for web pages.  For now it's omitted entirely. 
+  - For any resources suspected of being primarily print-based resources, any URL in the Zotero database is written to the BibTeX database in the "opt_url" field instead of the 'url' field.  This is to prevent bibtex styles from adding the url to citations of such resources  as is still the custom in quaint backwaters where words are still "printed" onto highly processed wood pulp.   We still liberally output the 'url' for other resources.  (The rule is:  a Zotero url goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.)  I didn't carefully consider every item type and the conditions under which you might want a URL in the citation.  It's just a simple heuristic to (mostly) do the right thing, and it does what I want.   Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
+
+Note that although I also added the import of 'opt_url' into Zotero's 'url' field, this won't happen for you even after you install this file, since Zotero still uses its stock BibTeX translator for import.  You may have to replace that one with this, and even then it may not work.  (I haven't tested it).  So for now don't expect data round-tripping.  In practice you can't expect that anyway since there is other data (principally file attachments) which Zotero does not export to BibTeX.
 
   - The "pages" field is not exported for books
     This is a change that should eventually make it into Zotero's standard BibTeX export.
 
   - The 'month' field is not exported for articles which have an issue number.  (Cf. for example Chicago Manual of Style 17.161--163)
 
-  - The lcc and  archive location fields are not exported
+3) Other changes
 
-  - The DOI field is not exported.
+  - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)
+      A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting approval.
 
 It's easy enough to add any of these back in by uncommenting the appropriate lines in the BibTeX-ScotsClean.js file
 

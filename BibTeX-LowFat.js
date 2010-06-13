@@ -75,9 +75,8 @@ var fieldMap = {
 //	isbn:"ISBN",
 //	issn:"ISSN",
 //	lccn:"callNumber",
-//	location:"archiveLocation",
+	location:"archiveLocation",
 	shorttitle:"shortTitle",
-//	url:"url",
 //	doi:"DOI",
 	"abstract":"abstractNote"
 };
@@ -1637,7 +1636,7 @@ function processField(item, field, value) {
 		if (/:\/\//.test(value)) { // a full uri is given
 			item.attachments = [{url:value, mimeType:"application/pdf", downloadable:true}];
 		} else { // if no uri is given, assume that it is an absolute path to the PDF
-			item.attachments = [{url:"file://"+value, mimeType:"application/pdf"}];
+    			item.attachments = [{url:"file://"+value, mimeType:"application/pdf"}];
 		}
 	} else if (field == "sentelink") { // the reference manager 'Sente' has a unique file scheme in exported BibTeX
 			item.attachments = [{url:value.split(",")[0], mimeType:"application/pdf", downloadable:true}];
@@ -1651,7 +1650,9 @@ function processField(item, field, value) {
 		} else {
 			item.attachments = [{url:"file://"+filepath, title:filetitle, downloadable:true}];
 		}
-	}
+	} else if ((field == "url") || (field == "opt_url")) {
+                item.url == value;
+        }
 }
 
 function getFieldValue(read) {
@@ -1832,11 +1833,11 @@ function writeField(field, value, isMacro) {
 	// url field is preserved, for use with \href and \url
 	// Other fields (DOI?) may need similar treatment
 
-        // sb: Don't escape things in the keywords fxield either.  
+        // sb: Don't escape things in the keywords field either.  
         // sb: Whether you want this depends on what sort of non-alphanumeric stuff you have in your tags
         // sb: and how you want to use them.  But for searching and general reading, I don't want my underscores escaped
 
-	if(!((field == "url") || (field == "doi") || (field == "keywords"))) {
+	if(!((field == "url") ||  (field == "opt_url") || (field == "doi") || (field == "keywords"))) {
 		// I hope these are all the escape characters!
 		value = value.replace(/[|\<\>\~\^\\]/g, mapEscape).replace(/([\#\$\%\&\_])/g, "\\$1");
 		// Case of words with uppercase characters in non-initial positions is preserved with braces.
@@ -2037,7 +2038,30 @@ function doExport() {
 			}
 		}
 		
-		if(item.extra) {
+                // The conditions for putting the url in an opt_url field
+                // so that our bibtex style doesn't automatically add the url to the citation
+                // Generally we do this for print based resources (books, book sections, theses,
+                // and anything with a page number or range.
+                
+               
+                if(item.url) {
+			if ((item.itemType == "book") || 
+                            (item.itemType == "bookSection") || 
+                            (item.itemType == "thesis") || 
+                            (item.pages)) {
+                           writeField("opt_url", item.url);
+		// otherwise we just put the url into the 'url' field           
+                           } else {writeField("url", item.url);
+                             }
+	        }	
+                
+                // if you want the url to be kept in the 'url' field for all items, use this instead:
+                // if (item.url) {
+                //        writeField("url", item.url);
+                // }
+                               
+
+                if(item.extra) {
 			writeField("note", item.extra);
 		}
 		
@@ -2061,6 +2085,7 @@ function doExport() {
 		if(item.itemType == "webpage") {
 			writeField("howpublished", item.url);
 		}
+
                 
                 // Comment this out if you don't want your Zotero notes exported (each put into a separate "annote" field)
 		if (item.notes) {
