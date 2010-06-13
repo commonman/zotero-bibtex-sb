@@ -18,51 +18,62 @@ Because of the non standardized nature of BibTeX, Zotero's BibTeX export can't p
 
 This makes the following changes from Zotero's standard BibTeX export:
 
-1)  Some fields are not exported.  This is to prevent eager BibTeX styles from adding them to your citations.  
+1)  Some fields are not exported.  This is to prevent eager BibTeX styles from adding them to your citations when you don't want them. 
 
    + ISBN
 
    + ISSN
 
-   + Library of Congress catalogue number ('lccn')
+   + Library of Congress catalog number ('lccn')
 
    + DOI
 
 2)  Some fields are exported only under certain conditions:
 
-  - For any resources suspected of being primarily print-based resources, any URL in the Zotero database is written to the BibTeX database in the "opt_url" field instead of the 'url' field.  This is to prevent bibtex styles from adding the url to citations of such resources  as is still the custom in quaint backwaters where words are still "printed" onto highly processed wood pulp.   We still liberally output the 'url' for other resources.  (The rule is:  a Zotero url goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.)  I didn't carefully consider every item type and the conditions under which you might want a URL in the citation.  It's just a simple heuristic to (mostly) do the right thing, and it does what I want.   Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
-
-Note that although I also added the import of 'opt_url' into Zotero's 'url' field, this won't happen for you even after you install this file, since Zotero still uses its stock BibTeX translator for import.  You may have to replace that one with this, and even then it may not work.  (I haven't tested it).  So for now don't expect data round-tripping.  In practice you can't expect that anyway since there is other data (principally file attachments) which Zotero does not export to BibTeX.
+  - For any resources suspected of being primarily print-based resources, any URL in the Zotero database is written to the BibTeX database in an 'opt_url' field instead of a 'url' field.  This is to prevent BibTeX styles from adding the URL to citations of such resources---as is still the custom in quaint backwaters where words are still "printed" onto processed wood pulp.   We still liberally output the URL (to BibTeX 'url') for other resource types.  See the implication of this below.  
 
   - The "pages" field is not exported for books
-    This is a change that should eventually make it into Zotero's standard BibTeX export.
+    (A patch for this has been submitted to the zotero-dev list.)
 
   - The 'month' field is not exported for articles which have an issue number.  (Cf. for example Chicago Manual of Style 17.161--163)
 
 3) Other changes
 
-  - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)
-      A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting approval.
+  - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)  (A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting approval.)
 
-It's easy enough to add any of these back in by uncommenting the appropriate lines in the BibTeX-ScotsClean.js file
+It's easy enough to add any of these back in by uncommenting the appropriate lines in the BibTeX-LowCal.js file
+
+** Notes
+
+The rule for exporting the URL is:  a Zotero URL goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.  This will not do the right thing if you catalog resources which have both a citable URL and a page range.   It's just a simple heuristic to (mostly) do the right thing, and it does what I want.   Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
+
+Note that although I also added the import of 'opt_url' into Zotero's 'url' field, this won't happen automatically for you even after you install this file, since Zotero still uses its stock BibTeX translator for import.  You may have to replace that one with this.  (I haven't tested it).  Unless you do this you won't be able to re-import those URL's stored in the 'opt_url' field, so no data round-tripping.  In practice you can't expect that anyway since Zotero export to BibTeX is by nature lossy. (Zotero stores more information than BibTeX, even making use of common extensions).
 
 ** To Use
-Drop them in your zotero/translators directory, which is usually within your Firefox profile.  To find out where your zotero data directory is, look in:
+Drop one of the BibTeX-xxxxxx.js files into your zotero/translators directory, which is usually within your Firefox profile.  To find out where your zotero data directory is, look in:
 
 Zotero Preferences --> Advanced  --> Show Data Directory
 
 the 'translators' directory is inside that.  When you restart Firefox, the new export will be available in the list.
 
-** To Do
+** Yet To Do
 
-*** TODO Prepare a version with less controversial changes to propose to Zotero's dev team.
+ + Add a function to ascii-ize the author's last name and title words of the key rather than just removing the non-ascii letters (that makes for ugly keys)
 
-*** TODO Add a function to ascii-ize the author's last name and title words of the key rather than just removing the non-ascii letters (that makes for ugly keys)
+ + Add the ability to specify what fields do/don't get exported as a variable at the top of the file
 
-*** TODO Add the ability to specify what fields do/don't get exported as a variable at the top of the file
+ + Add a link to the attached files in Zotero's storage directory
 
-*** TODO Do something much more clever with url's .  Instead of omitting them entirely, we should rather either just leave them for web pages (and similar?) or we should omit them from certain resource types (book, article, thesis).  or best: for books and theses, and articles whose data contains a something in the 'pages' field (demonstrating it is a print resource), we should rename the URL field to opt_url
 
-*** TODO Add a link to the attached files in Zotero's storage directory
+** Alternatives to this approach
 
+If your trouble (like mine) that your BibTeX output from Zotero contains fields you don't want, there are other options to getting what you want.   
+
+(1) Use a BibTeX style which just ignore the extra fields.  Some BibTeX files automatically ignore the 'month' field for journal articles.  You may be able to use one of these or to modify your BibTeX style not to make use of the fields you don't want.
+
+(2) Postprocess your BibTeX files using a text editor, a BibTeX reference manager like JabRef, a scripting language (perl, bash, python or sed) or a dedicated BibTeX postprocessor like 'bibtool' or the new 'bibtexformat'.    
+
+(3) If you use LyX for writing LaTeX, check out the new Firefox plugin LyZ, which maintains a BibTeX based of the works cited in a particular LyX document.
+
+(4) Mendeley has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you have no control over the BibTeX export, except for the generation of the automatically generated BibTeX keys.  You may still have to make a copy of your BibTeX database and postprocess it (2).
 
