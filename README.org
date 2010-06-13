@@ -10,7 +10,7 @@ My initial aim is just to make the modifications I have made available to anyone
 
 This started because I couldn't find a BibTeX postprocessor that would meet my needs.  Nor did I really relish the thought of using one every time I update a few database entries and want to see the output in my PDF right away. 
 
-Because of the non standardized nature of BibTeX, Zotero's BibTeX export can't produce the perfect output for all users.  The choices for dealing with that are either to: find a BibTeX (.bst) file which handles Zotero's output and does what you want.  Tweak such a .bst file to handle all the data that Zotero gives it but still outputs only the data you want.  Postprocess your Zotero-exported BibTeX to get what you want or (what I have done here) go all the way back to the source and get Zotero to output BibTeX how you want it in the first place.  Many users will have to use some combination of these.  Follow your bliss.  This was mine.
+Because of the non standardized nature of BibTeX, Zotero's BibTeX export can't produce the perfect output for all users.  The choices for dealing with that are listed at the end of this page, but generally involve postprocessing with a script or a BibTeX-aware tool.  Needless to say there are other ways to do these things.  Follow your bliss.  This was mine.
 
 Feel free to contact me with any comments:
 
@@ -34,7 +34,7 @@ This makes the following changes from Zotero's standard BibTeX export:
 
 2)  Some fields are exported only under certain conditions:
 
-  - For any resources suspected of being primarily print-based resources, any URL in the Zotero database is written to the BibTeX database in an 'opt_url' field instead of a 'url' field.  This is to prevent BibTeX styles from adding the URL to citations of such resources---as is still the custom in quaint backwaters where words are still "printed" onto processed wood pulp.   We still liberally output the URL (to BibTeX 'url') for other resource types.  See the implication of this below.  
+  - For any resources suspected of being primarily print-based resources, any URL in the Zotero database is written to the BibTeX database in an 'opt_url' field instead of a 'url' field.  This is to prevent BibTeX styles from adding the URL to citations of such resources, thus following the conventions of those quaint backwaters where words are still "printed" onto processed wood pulp.   We still liberally output the URL (to the BibTeX 'url' field) for other resource types.  See "Notes" below for more. 
 
   - The "pages" field is not exported for books
     (A patch for this has been submitted to the zotero-dev list.)
@@ -43,11 +43,13 @@ This makes the following changes from Zotero's standard BibTeX export:
 
 3) Other changes
 
-  - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)  (A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting approval.)
+  - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)  (A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting testing and approval.)
 
-  - Exported Zotero tags are no longer LaTeX escaped.  This makes them easier to read and search.
+  - Exported Zotero tags in the LaTeX 'keyword' field are no longer LaTeX escaped.  This makes them easier to read and search.  
 
 It's easy enough to add any of these back in by uncommenting the appropriate lines in the BibTeX-LowCal.js file
+
+It's also not hard to eliminate further fields, like "annote", "extra" or "location".  By throwing a few comments into the file.
 
 ** Notes
 
