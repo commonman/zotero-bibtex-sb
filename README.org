@@ -59,6 +59,14 @@ It's easy enough to revert these changes uncommenting the appropriate lines in t
 
 It's also not hard to eliminate other fields like "annote", "extra" or "location".  Just look at the examples in the code.  Even you can probably do it. :-)
 
+
+** BibTeX (Non-Fat)
+
+This makes all the modifications of Low-Fat, but goes further.  It does not export copyright ("rights"), archive location ("locaton"), "absract", "notes", "keywords", or  "extra" fields.  In other words it tries to pass on nothing but the core bibliographic metadata fields.  It may go /too/ far for many users.  But if you're having severe problems with extra data for your bibliographic style, it may be just the thing.  The changes from the "Low-Fat" version are all omissions, so they are easy enough to reverse individually by uncommenting the lines or stanzas of code that mention them.
+
+** Proposed to Zotero
+This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt.  A patch has been submitted to Zotero-dev and is awaiting approval.
+
 * Notes
 
 The rule for exporting the URL is:  a Zotero URL goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.  This will mostly do the right thing, but not if you catalog resources which have both a citable URL and a page range.   It does what I want. Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
@@ -111,7 +119,8 @@ In a world where lots of databases and bibliography tools export 'BibTeX', BibTe
 
 To my mind this means that such styles need to include mechanisms to specify at the document level (and for flexible styles like Chicago, at the point of citation as well) whether any of the optional fields (ISBN, DOI, URL, etc.) should be used.    
 
-It may be that as BibTeX evolves to use [[http://biblatex-biber.sourceforge.net/][better data storage formats and 'real' databases as its backend]], that it will be able to directly access the databases of Zotero and other modern bibliography managers.  
+It may be that as BibTeX evolves to use [[http://biblatex-biber.sourceforge.net/][better data storage formats and 'real' databases as its backend]], that it will be able to directly access the databases of Zotero and other modern bibliography managers.  This will make it even more necessary for whatever then passes for BibTeX .bst styles to allow for flexibility in the matter of what bibliographic data they make use of in the act of citing.
+
 * Alternatives to this approach
 
 If your BibTeX output from Zotero contains fields you don't want, there are also other options for getting good output. 
@@ -122,7 +131,7 @@ If your BibTeX output from Zotero contains fields you don't want, there are also
 
 (3) If you use [[http://www.lyx.org][LyX]] for writing LaTeX, check out the new Firefox plugin  [[https://addons.mozilla.org/en-US/firefox/addon/56806/][LyZ]], which maintains a BibTeX based of the works cited in a particular LyX document.
 
-(4) Mendeley has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you may have limited control over the BibTeX export Of course you can still make a copy of your BibTeX database and postprocess it (2).
+(4) [[http://www.mendeley.com/][Mendeley]]http://github.com/commonman/zotero-bibtex-sb has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you may have limited control over the BibTeX export Of course you can still make a copy of your BibTeX database and postprocess it (2).
 
 I chose to tweak the Zotero export files simply because it lets me keep Zotero as my main database (rather than just as a collection tool) without having to run a postprocessor every time I export modifications to my data.  I also wanted my BibTeX database in UTF-8 encoding, which Zotero does well, but which the postprocessors at the time did not.  
 
