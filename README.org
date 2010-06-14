@@ -109,21 +109,21 @@ I'd love to see a flexible BibTeX export for Zotero, either in Zotero itself or-
 
 In a world where lots of databases and bibliography tools export 'BibTeX', BibTeX data files are increasingly likely to have 'surplus' data, useful and standard data fields which may be unused in any given publishing project. Because of this is would be smart if BibTeX styles and their descendants allow for extra data in the database files they use. 
 
-To my mind this means that such styles include mechanisms to specify at the document level (and for flexible styles like Chicago, at the point of citation as well) whether any of the optional fields (ISBN, DOI, URL) should be used.  
+To my mind this means that such styles need to include mechanisms to specify at the document level (and for flexible styles like Chicago, at the point of citation as well) whether any of the optional fields (ISBN, DOI, URL, etc.) should be used.    
 
-It may be that as BibTeX evolves adapts to use [[http://biblatex-biber.sourceforge.net/][better data storage formats and 'real' databases as its backend]], that it will be able to directly access the databases of Zotero and other modern bibliography managers.  
+It may be that as BibTeX evolves to use [[http://biblatex-biber.sourceforge.net/][better data storage formats and 'real' databases as its backend]], that it will be able to directly access the databases of Zotero and other modern bibliography managers.  
 * Alternatives to this approach
 
-If your trouble (like mine) that your BibTeX output from Zotero contains fields you don't want, there are other options to getting what you want.   
+If your BibTeX output from Zotero contains fields you don't want, there are also other options for getting good output. 
 
-(1) Use a BibTeX style which just ignore the extra fields.  Some BibTeX files automatically ignore the 'month' field for journal articles.  You may be able to use one of these or to modify your BibTeX style not to make use of the fields you don't want.
+(1) Use a BibTeX style which just ignores the extra fields and does the right thing.  Some BibTeX files automatically ignore the 'month' field for journal articles, for example, if it's not necessary for citation.  You may be able to use such a style or to modify your existing BibTeX style so that it doesn't use the fields you don't want.  This is less possible for citation styles which leave considerable control in the hands of the author and editor (e.g. Chicago notes), because those require that the author be able to make such decisions based his or her sense of what is required for the citation of any individual resource.  Of course if that is the case postprocessors and this exporter won't be of much help either.  
 
 (2) Postprocess your BibTeX files using a text editor, a BibTeX reference manager like [[http://jabref.sourceforge.net/][JabRef]], a scripting language (Perl, bash, python or sed) or a dedicated BibTeX postprocessor like [[http://www.gerd-neugebauer.de/software/TeX/BibTool/]['bibtool']] or the new [[http://www.bulheller.com/bibtexformat.html]['bibtexformat']].    
 
 (3) If you use [[http://www.lyx.org][LyX]] for writing LaTeX, check out the new Firefox plugin  [[https://addons.mozilla.org/en-US/firefox/addon/56806/][LyZ]], which maintains a BibTeX based of the works cited in a particular LyX document.
 
-(4) Mendeley has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you have no control over the BibTeX export, except for the generation of the automatically generated BibTeX keys.  You may still have to make a copy of your BibTeX database and postprocess it (2).
+(4) Mendeley has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you may have limited control over the BibTeX export Of course you can still make a copy of your BibTeX database and postprocess it (2).
 
-I chose to tweak the export files simply because it lets me keep Zotero as my main database (rather than collecting it in Zotero and migrating to JabRef), without having to run a postprocessor every time I export modifications to my data.  I also wanted my BibTeX database in UTF-8 encoding, which Zotero does well, but which the postprocessors at the time did not.  
+I chose to tweak the Zotero export files simply because it lets me keep Zotero as my main database (rather than just as a collection tool) without having to run a postprocessor every time I export modifications to my data.  I also wanted my BibTeX database in UTF-8 encoding, which Zotero does well, but which the postprocessors at the time did not.  
 
-I have a big-ish database of 1800 items.  Since it still exports in under a minute, I just export the whole thing afresh when I want to update my BibTeX file with the latest from my Zotero database.  It keeps it to a single step.  
+I have a big-ish database of 1800 items.  Since it still exports in under a minute, I just export the whole thing afresh when I want to update my BibTeX file with the latest from my Zotero database.  It keeps export to a single step.
