@@ -67,8 +67,8 @@ If the aim of "Low-Fat" was to exclude those fields which get unintentially used
 This of course may go /too/ far for many users, though (except for 'extra') I tried not to cut anything that was commonly used in citations for standard print resources and websites.    But if you're having severe problems with surplus data for your bibliographic style, it may be just the thing.  The changes from the "Low-Fat" version are all omissions, so they are easy enough to reverse individually by uncommenting the lines or stanzas of code that mention them.
 
 ** Proposed to Zotero
-This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt.  A patch has been submitted to Zotero-dev and is awaiting approval.
-
+This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt.  A patch for these has been submitted to Zotero-dev and is awaiting approval.
+The file and the patch are found in the 'proposed-for-stock-zotero' directory.
 * Notes
 
 The rule for exporting the URL is:  a Zotero URL goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.  This will mostly do the right thing, but not if you catalog resources which have both a citable URL and a page range.   It does what I want. Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
@@ -109,7 +109,7 @@ If you want to make your own BibTeX exporter (as opposed to modifying mine), do 
 
 (3) Generate a unique GUID for the 'translatorID' field.  Possibly online at a site like [[http://createguid.com/][Create GUID]].  This is just a unique-in-the-history-of-the-world number so that your translator doesn't get confused with anyone else's.
 
-(4) Make your edits.  The easiest kind are edits of omission, which you will usually make either at the beginning of the file in the 'fieldMap' variable, or at the end of the file in the 'doExport' function.  See the lines commented out with '//'.
+(4) Make your edits.  The easiest kind are edits of omission, which you will usually make either at the beginning of the file in the 'fieldMap' variable, or at the end of the file in the 'doExport' function.  The file is huge, but almost all is taken up by the large translation tables.  See the lines commented out with '//'.
 
 (5) Save your new translator and put it into zotero/translators with a new file name.  It should show up in your list of exporters after you restart Firefox.  I keep a small test bibliography (in reference/TestBib of this repository) to test my modifications on a small dataset.  This makes it easy to see differences in the generated BibTeX entries.  
 
