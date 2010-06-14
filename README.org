@@ -1,20 +1,28 @@
 #+TITLE: An Alternative to Zotero's BibTeX Export
 
-* What This Is
+* What is this?
 
-This repository contains a one or more attempts to improve on Zotero's existing BibTeX export facilities for my own needs.  These files They are in the form of modified BibTeX export translators which you can drop into your zotero/translators folder and use for export.  This is easy enough to do, and keeps Zotero's existing BibTeX intact.
+An attempt to improve on Zotero's standard BibTeX export, at least for my own purposes.
 
-These files have no user interface, or preferences to set.  They consist only of a modified versions of Zotero's standard BibTeX export file, which you can find in '[somedir]/zotero/translators/BibTeX.js'  If you want to change anything, you can edit the Javascript yourself.  This is a little daunting if you've never done it before, but it's not rocket science either.  The modified versions are commented to guide you in your own further modifications.  
+This repository includes one or more BibTeX export translators which you can drop into your zotero/translators folder and use to export BibTeX.  This is easy enough to do, and keeps Zotero's existing BibTeX intact.
 
-My initial aim is just to make the modifications I have made available to anyone who finds them useful.  I'll also consider including modifications that other Zotero/BibTeX users find useful--- if necessary by creating multiple different BibTeX-Export files from which you can (here) select.
+** Why do this?
 
-This started because I couldn't find a BibTeX postprocessor that would meet my needs.  Nor did I really relish the thought of using one every time I update a few database entries and want to see the output in my PDF right away. 
+I use [[zotero.org][Zotero]] as my bibliographic database and BibTeX (actually [[http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex.html][BibLaTeX]]) to process my references.  I work on my database as I go, adding new items and editing old ones in the process of writing, and I want get new database items and edits into my LaTeX documents in as few steps as possible.  Also, I use a [[http://www.ctan.org/tex-archive/help/Catalogue/entries/biblatex-chicago-notes-df.html][BibLaTeX citation style]] which helpfully /includes/ optional fields based on whether or not they are in my .bib database.  Zotero's BibTeX-export outputs some fields that I *don't* want in my citations or bibliography (URL, ISBN, ISSN, DOI, 'month' for academic journals, and ---at the moment--- the "pages" field for books.)  If I don't keep them out of (or remove them from) my BibTeX database, they clutter my end result.  This little project is an attempt to get the fields I want for BibTeX processing in as few extra steps as possible.  
 
-Because of the non standardized nature of BibTeX, Zotero's BibTeX export can't produce the perfect output for all users.  The choices for dealing with that are listed at the end of this page, but generally involve postprocessing with a script or a BibTeX-aware tool.  Needless to say there are other ways to do these things.  Follow your bliss.  This was mine.
+** Why doesn't Zotero do all this by default?
 
-Feel free to contact me with any comments:
+Zotero's aim is to a decent job of exporting all bibliographic metadata which you can reasonably get into a not-too-idiosyncratic dialect of BibTeX.  A full, flexible BibTeX export within Zotero would introduce interface complexity which some feel would be orthogonal to Zotero's design principles.  Also such an export interface would be a decent bit bit of work for what amounts to a small (and reportedly hard to please) set of BibTeX+Zotero users (who us?).  Furthermore postprocessing your database is an ancient tradition in the BibTeX world.  Tools exist for this sort of thing.  
 
-scot dot becker at gmail dot com
+** But
+
+I couldn't find a BibTeX postprocessor that would meet all my needs.  They didn't handle Unicode BibTeX data well. They had artifacts that I didn't want, and there were some changes I wanted that they weren't designed to produce.  In addition I was glad for the simplicity of doing my whole export in one step. Needless to say there are other ways to do these things (a few are listed at the end of this page).  Follow your bliss.  This was mine.
+
+My initial aim is just to make the modifications available to anyone who might finds them useful.  I'll do my best to help you with modifications that you require, within the limits of my ability and time.  I also have included code comments and instructios below to help you in making your own modifications. 
+
+Feel free to contact me with any comments, questions or patches:
+
+  :  scot dot becker at gmail dot com
 
 * The BibTeX Exporters
 
@@ -34,61 +42,88 @@ This makes the following changes from Zotero's standard BibTeX export:
 
 2)  Some fields are exported only under certain conditions:
 
-  - For any resources suspected of being primarily print-based resources, any URL in the Zotero database is written to the BibTeX database in an 'opt_url' field instead of a 'url' field.  This is to prevent BibTeX styles from adding the URL to citations of such resources, thus following the conventions of those quaint backwaters where words are still "printed" onto processed wood pulp.   We still liberally output the URL (to the BibTeX 'url' field) for other resource types.  See "Notes" below for more. 
+  - For any resources suspected of being primarily print-based, the URL is written to the BibTeX output to an 'opt_url' field instead of a 'url' field.  This is to prevent BibTeX styles from adding the URL to citations of such resources, thus following the conventions of those quaint backwaters where words are still "printed" onto processed wood pulp.   We still liberally output the URL (to the BibTeX 'url' field) for other resource types, and for journal articles with no page reference given.  See "Notes" below for more. 
 
   - The "pages" field is not exported for books
     (A patch for this has been submitted to the zotero-dev list.)
 
-  - The 'month' field is not exported for articles which have an issue number.  (Cf. for example Chicago Manual of Style 17.161--163)
+  - The 'month' field is not exported for articles which have an issue number.  (Cf. for example Chicago Manual of Style 17.161--163).  Some styles helpfully print this if it's in your data file.  It's a way of giving the author flexibilty.  But with auto-generated data, it does the Wrong Thing.
 
 3) Other changes
 
   - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)  (A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting testing and approval.)
 
-  - Exported Zotero tags in the LaTeX 'keyword' field are no longer LaTeX escaped.  This makes them easier to read and search.  
+  - Exported Zotero tags in the LaTeX 'keyword' field are no longer LaTeX escaped.  This makes them easier to read and search.  Unless you use them for LaTeX-ing, this is probably what you want too.
 
-It's easy enough to add any of these back in by uncommenting the appropriate lines in the BibTeX-LowFat.js file
+It's easy enough to revert these changes uncommenting the appropriate lines in the BibTeX-LowFat.js file, or by copying back the relevant bits from the stock BibTeX.js file.
 
-It's also not hard to eliminate further fields, like "annote", "extra" or "location".  By throwing a few comments into the file.
+It's also not hard to eliminate other fields like "annote", "extra" or "location".  Just look at the examples in the code.  Even you can probably do it. :-)
 
-** Notes
+* Notes
 
-The rule for exporting the URL is:  a Zotero URL goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.  This will not do the right thing if you catalog resources which have both a citable URL and a page range.   It's just a simple heuristic to (mostly) do the right thing, and it does what I want.   Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
+The rule for exporting the URL is:  a Zotero URL goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.  This will mostly do the right thing, but not if you catalog resources which have both a citable URL and a page range.   It does what I want. Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
 
-Note that although I also added the import of 'opt_url' into Zotero's 'url' field, this won't happen automatically for you even after you install this file, since Zotero still uses its stock BibTeX translator for import.  You may have to replace that one with this.  (I haven't tested it).  Unless you do this you won't be able to re-import those URL's stored in the 'opt_url' field, so no data round-tripping.  In practice you can't expect that anyway since Zotero export to BibTeX is by nature lossy. (Zotero stores more information than BibTeX, even making use of common extensions).
+Note that although I also added the import of 'opt_url' into Zotero's URL field, this won't happen automatically for you even after you install this file, since Zotero still uses its stock BibTeX translator for import.  You may have to replace that one with this.  (I haven't tested it).  Unless you do this you won't be able to re-import those URL's stored in the 'opt_url' field, so no data round-tripping.  In practice you can't expect decent data round-tripping since Zotero export to BibTeX is by nature lossy. (Zotero stores more information than BibTeX).
 
-** To Use
+* To Use
 Drop one of the BibTeX-xxxxxx.js files into your zotero/translators directory, which is usually within your Firefox profile.  To find out where your zotero data directory is, look in:
 
 Zotero Preferences --> Advanced  --> Show Data Directory
 
-the 'translators' directory is inside that.  When you restart Firefox, the new export will be available in the list.
+the 'translators' directory is inside that.  When you restart Firefox, the new translator will be available in the list when you export.
 
 ** Yet To Do
 
- + Add a function to ascii-ize the author's last name and title words of the key rather than just removing the non-ascii letters (that makes for ugly keys)
+ + Add a function to ascii-ize the author's last name and title words of the key rather than just removing the non-ascii letters (which makes for ugly keys when citing names and titles that have diacriticals).
 
  + Add the ability to specify what fields do/don't get exported as a variable at the top of the file
 
-
  + Remove HTML markup from 'notes' field.  At the moment, I get ugly LaTeXification of HTML.  With junk like this:  {\textless}p{\textgreater}
+Yuk.
 
 ** Wish I could do but probably can't
 
  + Add a link to the attached files in Zotero's storage directory.  I've looked at the code for this in a few other exporters, but I can't grok it.  If anyone has any ideas how to add this, I'd be happy to hear about it. 
 
-** Alternatives to this approach
+** Roll your own
+
+These files consist only of modified versions of Zotero's standard BibTeX export file, which you can find in '[firefox-profile-dir]/zotero/translators/BibTeX.js'  If you want to change anything, you can edit the Javascript yourself.  This is a little daunting if you've never done it before, but it's not rocket science either.  Have a look at the versions here---especially in a text editor that does syntax highlighting.  These versions are commented to given some guidance to non-Javascripters in further modifications.  
+
+Of course if you do this, you should keep good backups of your Zotero data.  Nothing should happen during export to corrupt your data normally, but *be warned*.  Neither I nor (especially) the Zotero developers take responsibility for your data in any case.  We take even less if take things into your own hands.  There.
+
+If you want to make your own BibTeX exporter (as opposed to modifying mine), do this:
+
+(1) Start with the stock BibTeX.js file, or my BibTeX-LowFat.js (which at the moment is better commented)
+
+(2) In a decent editor, change the "label" in the header to a name you like.
+
+(3) Generate a unique GUID for the 'translatorID' field.  Possibly online at a site like [[http://createguid.com/][Create GUID]].  This is just a unique-in-the-history-of-the-world number so that your translator doesn't get confused with anyone else's.
+
+(4) Make your edits.  The easiest kind are edits of omission, which you will usually make either at the beginning of the file in the 'fieldMap' variable, or at the end of the file in the 'doExport' function.  See the lines commented out with '//'.
+
+(5) Save your new translator and put it into zotero/translators with a new file name.  It should show up in your list of exporters after you restart Firefox.  I keep a small test bibliography (in reference/TestBib of this repository) to test my modifications on a small dataset.  This makes it easy to see differences in the generated BibTeX entries.  
+
+* The future
+
+I'd love to see a flexible BibTeX export for Zotero, either in Zotero itself or---what seems more likely---in a purpose-built BibTeX export plugin for Zotero, perhaps following on the work of [[https://addons.mozilla.org/en-US/firefox/addon/56806/][LyZ]].  
+
+In a world where lots of databases and bibliography tools export 'BibTeX', BibTeX data files are increasingly likely to have 'surplus' data, useful and standard data fields which may be unused in any given publishing project. Because of this is would be smart if BibTeX styles and their descendants allow for extra data in the database files they use. 
+
+To my mind this means that such styles include mechanisms to specify at the document level (and for flexible styles like Chicago, at the point of citation as well) whether any of the optional fields (ISBN, DOI, URL) should be used.  
+
+It may be that as BibTeX evolves adapts to use [[http://biblatex-biber.sourceforge.net/][better data storage formats and 'real' databases as its backend]], that it will be able to directly access the databases of Zotero and other modern bibliography managers.  
+* Alternatives to this approach
 
 If your trouble (like mine) that your BibTeX output from Zotero contains fields you don't want, there are other options to getting what you want.   
 
 (1) Use a BibTeX style which just ignore the extra fields.  Some BibTeX files automatically ignore the 'month' field for journal articles.  You may be able to use one of these or to modify your BibTeX style not to make use of the fields you don't want.
 
-(2) Postprocess your BibTeX files using a text editor, a BibTeX reference manager like JabRef, a scripting language (perl, bash, python or sed) or a dedicated BibTeX postprocessor like 'bibtool' or the new 'bibtexformat'.    
+(2) Postprocess your BibTeX files using a text editor, a BibTeX reference manager like [[http://jabref.sourceforge.net/][JabRef]], a scripting language (Perl, bash, python or sed) or a dedicated BibTeX postprocessor like [[http://www.gerd-neugebauer.de/software/TeX/BibTool/]['bibtool']] or the new [[http://www.bulheller.com/bibtexformat.html]['bibtexformat']].    
 
-(3) If you use LyX for writing LaTeX, check out the new Firefox plugin LyZ, which maintains a BibTeX based of the works cited in a particular LyX document.
+(3) If you use [[http://www.lyx.org][LyX]] for writing LaTeX, check out the new Firefox plugin  [[https://addons.mozilla.org/en-US/firefox/addon/56806/][LyZ]], which maintains a BibTeX based of the works cited in a particular LyX document.
 
 (4) Mendeley has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you have no control over the BibTeX export, except for the generation of the automatically generated BibTeX keys.  You may still have to make a copy of your BibTeX database and postprocess it (2).
 
-I chose to tweak the export files simply because it lets me keep Zotero as my main database (rather than collecting it in Zotero and migrating to JabRef), without having to run a postprocessor everytime I export modifications to my data.  I also wanted my BibTeX database in UTF-8 encoding, which Zotero does well, but which the postprocessors at the time did not.  
+I chose to tweak the export files simply because it lets me keep Zotero as my main database (rather than collecting it in Zotero and migrating to JabRef), without having to run a postprocessor every time I export modifications to my data.  I also wanted my BibTeX database in UTF-8 encoding, which Zotero does well, but which the postprocessors at the time did not.  
 
 I have a big-ish database of 1800 items.  Since it still exports in under a minute, I just export the whole thing afresh when I want to update my BibTeX file with the latest from my Zotero database.  It keeps it to a single step.  

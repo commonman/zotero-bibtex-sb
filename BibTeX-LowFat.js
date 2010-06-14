@@ -2,16 +2,56 @@
 	"translatorID":"f7e584da-73cd-11df-972e-8b24e0d720854",
 	"translatorType":3,
 	"label":"BibTeX (LowFat)",
-	"creator":"Simon Kornblith and Richard Karnesky with edits by Scot Becker",
+	"creator":"Simon Kornblith, Richard Karnesky, Scot Becker",
 	"target":"bib",
 	"minVersion":"1.0.0b4.r1",
 	"maxVersion":"",
 	"priority":200,
 	"inRepository":false,
-	"lastUpdated":"2010-05-31 18:20:00"
+	"lastUpdated":"2010-06-14 10:00:00"
 }
+/// BibTeX-LowFat.js  ---  BibTeX export of just the fields I need
+// 
+//  This file lives at:  http://github.com/commonman/zotero-bibtex-sb
+//  See that repository for notes and explanation
+//
+//  This file is a modified version of BibTeX.js, distributed with 
+//  the Zotero bibliographic manager, aimed at producing BibTeX data
+//  which is more suitable to my needs.  Feel free to use, modify, and 
+//  redistribute it.  
+//  
+//  This file is NOT part of the Zotero distribution, and is not supported
+//  by the Zotero devlopers.  
+//  
+//  You can of course submit comments, questions and patches to me
+//  scot dot becker (AT) gmail dot com
+// 
+//  This file is distributed under the the GPL-3 license.  For details:
+//  http://www.gnu.org/licenses
+//
 
-// NOTE: This file contains the code for both the import and export of BibTeX
+//  TO USE:
+//     
+//  Put this file in the 'zotero/translators' folder, normally stored
+//  within your Firefox profile, and restart Firefox. 
+//   Under Linux this is typically something like:
+//  /home/you/.mozilla/firefox/[randomstring].default/zotero/translators
+//
+//  and under Windows:
+//
+//  C:\Documents and Settings\<user>\Application Data\Mozilla\Firefox\Profiles\XXXXXX.default\zotero\translators
+//
+//
+//  TO EDIT:
+// 
+//  If you want to tweak BibTeX EXPORT, you will be chiefly interested in
+//  the 'fieldMap' variable near the beginnin of the file, and the 'doExport'
+//  function at the end. 
+//
+//  This file contains the code for both the import and export of BibTeX
+//  To do BibTeX input using this file you have to replace the standard
+//  BibTeX.js file with this one.  I haven't tested this.
+//
 
 Zotero.configure("dataMode", "block");
 Zotero.addOption("exportCharset", "UTF-8");
@@ -2086,7 +2126,7 @@ function doExport() {
 			writeField("howpublished", item.url);
 		}
 
-                
+
                 // Comment this out if you don't want your Zotero notes exported (each put into a separate "annote" field)
 		if (item.notes) {
 			for each (var note in item.notes) {
