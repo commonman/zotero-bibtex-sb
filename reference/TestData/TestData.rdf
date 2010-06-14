@@ -6,103 +6,8 @@
  xmlns:foaf="http://xmlns.com/foaf/0.1/"
  xmlns:z="http://www.zotero.org/namespaces/export#"
  xmlns:prism="http://prismstandard.org/namespaces/1.2/basic/"
- xmlns:vcard="http://nwalsh.com/rdf/vCard#"
- xmlns:link="http://purl.org/rss/1.0/modules/link/">
-    <bib:Article rdf:about="http://www.jstor.org/stable/4174965">
-        <dc:date>Oct., 1967</dc:date>
-        <dc:identifier>
-            <dcterms:URI>
-               <rdf:value>http://www.jstor.org/stable/4174965</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <dc:title>Notes on Transitivity and Theme in English: Part 2</dc:title>
-        <dcterms:dateSubmitted>2010-03-04 23:58:13</dcterms:dateSubmitted>
-        <dcterms:isPartOf rdf:resource="urn:issn:00222267"/>
-        <bib:authors>
-            <rdf:Seq>
-                <rdf:li>
-                    <foaf:Person>
-                        <foaf:givenname>M. A. K.</foaf:givenname>
-                        <foaf:surname>Halliday</foaf:surname>
-                    </foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:authors>
-        <bib:pages>199-244</bib:pages>
-        <z:itemType>journalArticle</z:itemType>
-        <z:libraryCatalog>JSTOR</z:libraryCatalog>
-        <z:shortTitle>Notes on Transitivity and Theme in English</z:shortTitle>
-    </bib:Article>
-    <bib:Journal rdf:about="urn:issn:00222267">
-        <prism:number>2</prism:number>
-        <prism:volume>3</prism:volume>
-        <dc:identifier>ISSN 00222267</dc:identifier>
-        <dc:title>Journal of Linguistics</dc:title>
-    </bib:Journal>
-    <bib:Book rdf:about="#item_64">
-        <dc:date>1970</dc:date>
-        <dc:publisher>
-            <foaf:Organization>
-                <vcard:adr>
-                    <vcard:Address>
-                       <vcard:locality>Bruges</vcard:locality>
-                    </vcard:Address>
-                </vcard:adr>
-                <foaf:name>Desclée De Brouwer</foaf:name>
-            </foaf:Organization>
-        </dc:publisher>
-        <dc:subject>3_partial_copy</dc:subject>
-        <dc:title>Témoignage de l'évangile de Luc</dc:title>
-        <dcterms:isPartOf>
-            <bib:Series>
-                <dc:identifier>4</dc:identifier>
-                <dc:title>Pour une histoire de Jésus</dc:title>
-            </bib:Series>
-        </dcterms:isPartOf>
-        <bib:authors>
-            <rdf:Seq>
-                <rdf:li>
-                    <foaf:Person>
-                        <foaf:givenname>Béda</foaf:givenname>
-                        <foaf:surname>Rigaux</foaf:surname>
-                    </foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:authors>
-        <z:itemType>book</z:itemType>
-    </bib:Book>
-    <bib:Book rdf:about="urn:isbn:3865725716">
-        <dc:date>2005</dc:date>
-        <dc:identifier>ISBN 3865725716</dc:identifier>
-        <dc:publisher>
-            <foaf:Organization>
-                <vcard:adr>
-                    <vcard:Address>
-                       <vcard:locality>Hamburg</vcard:locality>
-                    </vcard:Address>
-                </vcard:adr>
-                <foaf:name>Philo</foaf:name>
-            </foaf:Organization>
-        </dc:publisher>
-        <dc:title>"Licht zur Erleuchtung der Heiden und Herrlichkeit für dein Volk Israel" Studien zum lukanischen Doppelwerk</dc:title>
-        <dcterms:isPartOf>
-            <bib:Series>
-                <dc:identifier>151</dc:identifier>
-                <dc:title>Bonner biblische Beiträge</dc:title>
-            </bib:Series>
-        </dcterms:isPartOf>
-        <bib:editors>
-            <rdf:Seq>
-                <rdf:li>
-                    <foaf:Person>
-                        <foaf:givenname>Christoph Gregor</foaf:givenname>
-                        <foaf:surname>Müller</foaf:surname>
-                    </foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:editors>
-        <z:itemType>book</z:itemType>
-    </bib:Book>
+ xmlns:link="http://purl.org/rss/1.0/modules/link/"
+ xmlns:vcard="http://nwalsh.com/rdf/vCard#">
     <bib:Article rdf:about="http://search.ebscohost.com/login.aspx?direct=true&amp;db=rfh&amp;AN=ATLA0000776992&amp;site=ehost-live">
         <dc:date>1979 January 01, 1979</dc:date>
         <dc:identifier>
@@ -126,10 +31,13 @@
         </bib:authors>
         <bib:pages>57-95</bib:pages>
         <z:itemType>journalArticle</z:itemType>
+        <z:language>English</z:language>
         <z:libraryCatalog>EBSCOhost</z:libraryCatalog>
     </bib:Article>
     <bib:Journal rdf:about="urn:issn:0095-571X">
         <prism:number>16</prism:number>
+        <prism:volume>12</prism:volume>
+        <dc:identifier>DOI FAKEDOI11221122</dc:identifier>
         <dc:identifier>ISSN 0095-571X</dc:identifier>
         <dc:title>Semeia</dc:title>
     </bib:Journal>
@@ -195,6 +103,12 @@
                         <foaf:surname>Devitt</foaf:surname>
                     </foaf:Person>
                 </rdf:li>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname></foaf:givenname>
+                        <foaf:surname>Smith</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
             </rdf:Seq>
         </bib:authors>
         <bib:pages>696-718</bib:pages>
@@ -205,6 +119,7 @@
     <bib:Journal rdf:about="urn:issn:00100994">
         <prism:number>6</prism:number>
         <prism:volume>62</prism:volume>
+        <dc:identifier>DOI Fake DOI 8989898989898</dc:identifier>
         <dc:identifier>ISSN 00100994</dc:identifier>
         <dc:title>College English</dc:title>
     </bib:Journal>
@@ -214,55 +129,55 @@
         <rdf:resource rdf:resource="files/125/SamplePDF.pdf"/>
         <z:itemType>attachment</z:itemType>
     </z:Attachment>
-    <bib:Article rdf:about="#item_1019">
-        <dc:date>1984</dc:date>
-        <dc:subject>LIN</dc:subject>
-        <dc:title>El anuncio del angel y la objeción de María.</dc:title>
-        <dcterms:abstract>The author applies his theory of a literary pattern for heavenly announcements of birth and mission in biblical literature to Luke's account of the annunciation (see Est Bib Ns 42 no 1-2,21-70 1984). In this article the author concentrates on the role of Mary's objection as a literary device for eliciting a reaffirmation of the message from the heavenly messenger. [tr fr j by TDS].</dcterms:abstract>
-        <dcterms:isPartOf rdf:resource="urn:issn:0014-1437"/>
-        <bib:authors>
-            <rdf:Seq>
-                <rdf:li>
-                    <foaf:Person>
-                        <foaf:givenname>Salvador</foaf:givenname>
-                        <foaf:surname>Muñoz Iglesias</foaf:surname>
-                    </foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:authors>
-        <bib:pages>315 - 362</bib:pages>
-        <z:itemType>journalArticle</z:itemType>
-    </bib:Article>
-    <bib:Journal rdf:about="urn:issn:0014-1437">
-        <prism:number>3-4</prism:number>
-        <prism:volume>42</prism:volume>
-        <dc:identifier>ISSN 0014-1437</dc:identifier>
-        <dc:title>Estudios bíblicos</dc:title>
-    </bib:Journal>
-    <bib:Article rdf:about="#item_1417">
-        <dc:date>1992</dc:date>
-        <dc:title>La distinción entre acontecimiento-base artificio literario en los relatos derásicos : Una discusión con el Prof Muñoz Iglesias en su obra "Los Evangelios de la Infancia"</dc:title>
+    <bib:Book rdf:about="urn:isbn:777777777">
+        <prism:edition>2nd revised</prism:edition>
+        <dc:date>1970</dc:date>
+        <dc:description>English translation (1990)</dc:description>
+        <dc:identifier>ISBN 777777777</dc:identifier>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://justafakeurl.com</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Bruges</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Desclée De Brouwer</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:rights>Copyright the author</dc:rights>
+        <dc:subject>3_partial_copy</dc:subject>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>306.06 gh</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:title>Témoignage de l'évangile de Luc</dc:title>
+        <dcterms:abstract>Lorem ipsum.  Here would go a short, erudite description of the book, but instead I'm adding this filler, which, it should be obvious, is not an abstract.</dcterms:abstract>
+        <dcterms:dateSubmitted>2010-06-14</dcterms:dateSubmitted>
         <dcterms:isPartOf>
-            <bib:Journal>
-                <prism:number>1-4</prism:number>
-                <prism:volume>50</prism:volume>
-                <dc:identifier>ISSN 0014-1437</dc:identifier>
-                <dc:title>Estudios bíblicos</dc:title>
-            </bib:Journal>
+            <bib:Series>
+                <dc:identifier>4</dc:identifier>
+                <dc:title>Pour une histoire de Jésus</dc:title>
+            </bib:Series>
         </dcterms:isPartOf>
         <bib:authors>
             <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
-                        <foaf:givenname>Domingo</foaf:givenname>
-                        <foaf:surname>Muñoz León</foaf:surname>
+                        <foaf:givenname>Béda</foaf:givenname>
+                        <foaf:surname>Rigaux</foaf:surname>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
-        <bib:pages>123 - 148</bib:pages>
-        <z:itemType>journalArticle</z:itemType>
-    </bib:Article>
+        <z:itemType>book</z:itemType>
+        <z:libraryCatalog>University Library</z:libraryCatalog>
+        <z:numPages>260</z:numPages>
+        <z:shortTitle>Témoignage</z:shortTitle>
+    </bib:Book>
     <bib:Thesis rdf:about="http://proquest.umi.com/pqdweb?did=747071131&amp;Fmt=7&amp;clientId=69356&amp;RQT=309&amp;VName=PQD">
         <dc:date>1989</dc:date>
         <dc:identifier>
@@ -277,7 +192,7 @@
         </dc:publisher>
         <dc:title>The Song of Hannah: Text and contexts</dc:title>
         <dcterms:dateSubmitted>2008-09-01 20:08:27</dcterms:dateSubmitted>
-        <dcterms:isReferencedBy rdf:resource="#item_9318"/>
+        <dcterms:isReferencedBy rdf:resource="#item_151"/>
         <bib:authors>
             <rdf:Seq>
                 <rdf:li>
@@ -288,72 +203,90 @@
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
-        <link:link rdf:resource="#item_10337"/>
         <z:itemType>thesis</z:itemType>
         <z:libraryCatalog>ProQuest</z:libraryCatalog>
         <z:shortTitle>The Song of Hannah</z:shortTitle>
         <z:type>PhD</z:type>
     </bib:Thesis>
-    <bib:Memo rdf:about="#item_9318">
-        <rdf:value>&lt;p>The Song of Hannah (1 Sam 2:1-10) contains several key features that invite study from various perspectives. The project addresses these: the issue of the best available text, its dates of composition and of insertion into the book of Samuel, its genre and poetic features; and on a larger scale the Song&amp;apos;s interaction with its narrative context and the appearance of its archetypal &amp;quot;barren mother&amp;quot; imagery in Second Isaiah. Methodologically, the study applies text-critical principles to the various versions of the Song, and compares its linguistic and thematic features with those of archaic poems and Deuteronomistic passages in Joshua-2 Kings. It then analyzes form-critical aspects of the Song and examines its poetic features. Then the project applies typic and thematic approaches to the Song&amp;apos;s immediate and larger contexts: to the birth-of-Samuel account in 1 Sam 1:1-2:21, to 1 and 2 Samuel, and to Isaiah 40-55. The study concludes that the Song, a general hymn of praise, may well have been composed as early as the tenth century B.C.E., and was inserted into the narrative toward the end of the monarchy by editors with priestly interests. The Song&amp;apos;s position early in the books of Samuel, and its theme of divine protection of the needy during times of transition, using &amp;quot;barren mother&amp;quot; imagery, celebrates the ultimate rule of the Deity in the lives of individuals and in affairs of state, and sets the theocratic tone for the incipient monarchy. In a later transitional time, Second Isaiah&amp;apos;s archetypal &amp;quot;barren mother&amp;quot; imagery celebrates the divine protection of Jerusalem on the verge of return to the Land at the end of the exile. These conclusions suggest that further study of later versions and appropriations of the Song, such as in Targum Jonathan, Pseudo-Philo and the Magnificat (Luke 1:46-55), would demonstrate the continuing significance of both theme and imagery.&lt;/p></rdf:value>
+    <bib:Memo rdf:about="#item_151">
+        <rdf:value>&lt;p>The Song of Hannah (1 Sam 2:1-10) contains several key features that  invite study from various perspectives.&lt;/p></rdf:value>
     </bib:Memo>
-    <z:Attachment rdf:about="#item_10337">
+    <bib:Document rdf:about="http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf">
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>http://proquest.umi.com/pqdweb?did=747071131&amp;Fmt=7&amp;clientId=69356&amp;RQT=309&amp;VName=PQD</rdf:value>
+                <rdf:value>http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dc:title>Document View</dc:title>
-        <dcterms:dateSubmitted>2008-09-01 20:08:33</dcterms:dateSubmitted>
-        <link:charset>25</link:charset>
-        <link:type>text/html</link:type>
-        <rdf:resource rdf:resource="files/10337/pqdweb.html"/>
-        <z:itemType>attachment</z:itemType>
-    </z:Attachment>
-    <bib:BookSection rdf:about="urn:isbn:0253208696">
-        <prism:edition>1st Midland Book</prism:edition>
-        <dc:date>1994, c1990</dc:date>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>http://nrs.harvard.edu/urn-3:hul.ebookbatch.ACLS_batch:MIU01000000000000005840858</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <dc:publisher>
-            <foaf:Organization>
-                <vcard:adr>
-                    <vcard:Address>
-                       <vcard:locality>Bloomington</vcard:locality>
-                    </vcard:Address>
-                </vcard:adr>
-                <foaf:name>Indiana University Press</foaf:name>
-            </foaf:Organization>
-        </dc:publisher>
-        <dc:title>Intentio Lectoris: The State of the Art</dc:title>
-        <dcterms:dateSubmitted>2010-06-03 10:45:28</dcterms:dateSubmitted>
+        <dc:subject>OT</dc:subject>
+        <dc:title>Lohfink Bibliography</dc:title>
+        <dcterms:dateSubmitted>2007-04-13 08:37:37</dcterms:dateSubmitted>
         <dcterms:isPartOf>
-            <bib:Book>
-                <dc:identifier>ISBN 0253208696</dc:identifier>
-                <dc:title>The Limits of Interpretation</dc:title>
-                <dcterms:isPartOf>
-                    <bib:Series>
-                       <dc:title>Advances in Semiotics</dc:title>
-                    </bib:Series>
-                </dcterms:isPartOf>
-            </bib:Book>
+           <z:Website><dc:title>Bibliography</dc:title></z:Website>
         </dcterms:isPartOf>
         <bib:authors>
             <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
-                        <foaf:givenname>Umberto</foaf:givenname>
-                        <foaf:surname>Eco</foaf:surname>
+                        <foaf:givenname>Norbert</foaf:givenname>
+                        <foaf:surname>Lohfink</foaf:surname>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
-        <bib:pages>44-63</bib:pages>
-        <z:itemType>bookSection</z:itemType>
-    </bib:BookSection>
+        <z:itemType>webpage</z:itemType>
+    </bib:Document>
+    <bib:Book rdf:about="urn:isbn:3865725716">
+        <dc:date>2005</dc:date>
+        <dc:identifier>ISBN 3865725716</dc:identifier>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Hamburg</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Philo</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:title>"Licht zur Erleuchtung der Heiden und Herrlichkeit für dein Volk Israel" Studien zum lukanischen Doppelwerk</dc:title>
+        <dcterms:isPartOf>
+            <bib:Series>
+                <dc:identifier>151</dc:identifier>
+                <dc:title>Bonner biblische Beiträge</dc:title>
+            </bib:Series>
+        </dcterms:isPartOf>
+        <dcterms:isReferencedBy rdf:resource="#item_161"/>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Christoph Gregor</foaf:givenname>
+                        <foaf:surname>Müller</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <z:itemType>book</z:itemType>
+        <z:numPages>500</z:numPages>
+    </bib:Book>
+    <bib:Memo rdf:about="#item_161">
+        <rdf:value>&lt;h1>Outline&lt;/h1>
+&lt;p>This is an outline&lt;/p>
+&lt;p>It has a few paragraphs&lt;/p>
+&lt;p>And some indents&lt;/p>
+&lt;p>More here&lt;/p>
+&lt;p>and here.&lt;/p>
+&lt;h2>Second Level&lt;/h2>
+&lt;p>Some text.&lt;/p>
+&lt;h2>Second Level again&lt;/h2>
+&lt;h3>Third Level&lt;/h3>
+&lt;blockquote>
+&lt;p>And this is a blockquote.  &lt;br />Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/blockquote>
+&lt;p>And this is normal again.&lt;/p>
+&lt;p> &lt;/p>
+&lt;p> &lt;/p></rdf:value>
+    </bib:Memo>
     <bib:BookSection rdf:about="urn:isbn:3795401127%20(pbk.)">
         <dc:date>1981</dc:date>
         <dc:publisher>
@@ -401,42 +334,185 @@
         <bib:pages>11-26</bib:pages>
         <z:itemType>bookSection</z:itemType>
     </bib:BookSection>
-    <bib:Document rdf:about="http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf">
+    <bib:BookSection rdf:about="urn:isbn:0253208696">
+        <prism:edition>1st Midland Book</prism:edition>
+        <dc:date>1994, c1990</dc:date>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf</rdf:value>
+                <rdf:value>http://nrs.harvard.edu/urn-3:hul.ebookbatch.ACLS_batch:MIU01000000000000005840858</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dc:subject>OT</dc:subject>
-        <dc:title>Lohfink Bibliography</dc:title>
-        <dcterms:dateSubmitted>2007-04-13 08:37:37</dcterms:dateSubmitted>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Bloomington</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>Indiana University Press</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:title>Intentio Lectoris: The State of the Art</dc:title>
+        <dcterms:dateSubmitted>2010-06-03 10:45:28</dcterms:dateSubmitted>
         <dcterms:isPartOf>
-           <z:Website><dc:title>Bibliography</dc:title></z:Website>
+            <bib:Book>
+                <dc:identifier>ISBN 0253208696</dc:identifier>
+                <dc:title>The Limits of Interpretation</dc:title>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                       <dc:title>Advances in Semiotics</dc:title>
+                    </bib:Series>
+                </dcterms:isPartOf>
+            </bib:Book>
         </dcterms:isPartOf>
         <bib:authors>
             <rdf:Seq>
                 <rdf:li>
                     <foaf:Person>
-                        <foaf:givenname>Norbert</foaf:givenname>
-                        <foaf:surname>Lohfink</foaf:surname>
+                        <foaf:givenname>Umberto</foaf:givenname>
+                        <foaf:surname>Eco</foaf:surname>
                     </foaf:Person>
                 </rdf:li>
             </rdf:Seq>
         </bib:authors>
-        <link:link rdf:resource="#item_4145"/>
-        <z:itemType>webpage</z:itemType>
-    </bib:Document>
-    <z:Attachment rdf:about="#item_4145">
+        <bib:pages>44-63</bib:pages>
+        <z:itemType>bookSection</z:itemType>
+    </bib:BookSection>
+    <bib:Article rdf:about="http://www.jstor.org/stable/4174965">
+        <dc:date>Oct., 1967</dc:date>
+        <dc:description>this is the 'Extra' Field</dc:description>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>http://www.sankt-georgen.de/lehrende/lohfinkbibliogr.pdf</rdf:value>
+               <rdf:value>http://www.jstor.org/stable/4174965</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <dc:title>lohfinkbibliogr.pdf</dc:title>
-        <dcterms:dateSubmitted>2007-04-13 08:37:38</dcterms:dateSubmitted>
-        <link:charset>25</link:charset>
-        <link:type>application/pdf</link:type>
-        <rdf:resource rdf:resource="files/4145/lohfinkbibliogr.pdf"/>
-        <z:itemType>attachment</z:itemType>
-    </z:Attachment>
+        <dc:rights>Normal</dc:rights>
+        <dc:title>Notes on Transitivity and Theme in English: Part 2</dc:title>
+        <dcterms:abstract>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dcterms:abstract>
+        <dcterms:dateSubmitted>2010-03-04 23:58:13</dcterms:dateSubmitted>
+        <dcterms:isPartOf rdf:resource="urn:issn:00222267"/>
+        <dcterms:isReferencedBy rdf:resource="#item_162"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>M. A. K.</foaf:givenname>
+                        <foaf:surname>Halliday</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>199-244</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+        <z:libraryCatalog>JSTOR</z:libraryCatalog>
+        <z:shortTitle>Notes on Transitivity and Theme in English</z:shortTitle>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:00222267">
+        <prism:number>2</prism:number>
+        <prism:volume>3</prism:volume>
+        <dc:identifier>DOI FAKEDOI1112222</dc:identifier>
+        <dc:identifier>ISSN 00222267</dc:identifier>
+        <dc:title>Journal of Linguistics</dc:title>
+        <dcterms:alternative>J Ling</dcterms:alternative>
+    </bib:Journal>
+    <bib:Memo rdf:about="#item_162">
+       <rdf:value>&lt;p>A very simple note.  No paragraphs....&lt;/p></rdf:value>
+    </bib:Memo>
+    <bib:Article rdf:about="#item_159">
+        <dc:date>1984</dc:date>
+        <dc:subject>LIN</dc:subject>
+        <dc:title>El anuncio del angel y la objeción de María.</dc:title>
+        <dcterms:abstract>The author applies his theory of a literary pattern for heavenly announcements of birth and mission in biblical literature to Luke's account of the annunciation (see Est Bib Ns 42 no 1-2,21-70 1984). In this article the author concentrates on the role of Mary's objection as a literary device for eliciting a reaffirmation of the message from the heavenly messenger. [tr fr j by TDS].</dcterms:abstract>
+        <dcterms:isPartOf rdf:resource="urn:issn:0014-1437"/>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Salvador</foaf:givenname>
+                        <foaf:surname>Muñoz Iglesias</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>315 - 362</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+    </bib:Article>
+    <bib:Journal rdf:about="urn:issn:0014-1437">
+        <prism:number>3-4</prism:number>
+        <prism:volume>42</prism:volume>
+        <dc:identifier>ISSN 0014-1437</dc:identifier>
+        <dc:title>Estudios bíblicos</dc:title>
+        <dcterms:alternative>Est Bib</dcterms:alternative>
+    </bib:Journal>
+    <bib:Article rdf:about="http://fakeaurl.com">
+        <dc:date>1992-02</dc:date>
+        <dc:identifier>
+           <dcterms:URI><rdf:value>http://fakeaurl.com</rdf:value></dcterms:URI>
+        </dc:identifier>
+        <dc:title>La distinción entre acontecimiento-base artificio literario en los relatos derásicos : Una discusión con el Prof Muñoz Iglesias en su obra "Los Evangelios de la Infancia"</dc:title>
+        <dcterms:isPartOf>
+            <bib:Journal>
+                <prism:number>1-4</prism:number>
+                <prism:volume>50</prism:volume>
+                <dc:identifier>DOI FAKEDOI 77777777</dc:identifier>
+                <dc:identifier>ISSN 0014-1437</dc:identifier>
+                <dc:title>Estudios bíblicos</dc:title>
+                <dcterms:alternative>Est Bib</dcterms:alternative>
+            </bib:Journal>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Domingo</foaf:givenname>
+                        <foaf:surname>Muñoz León</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>123 - 148</bib:pages>
+        <z:itemType>journalArticle</z:itemType>
+    </bib:Article>
+    <bib:Article rdf:about="http://afakeurl.com/really/">
+        <prism:edition>Evening</prism:edition>
+        <dc:date>2010-07-02</dc:date>
+        <dc:identifier>
+            <dcterms:URI>
+               <rdf:value>http://afakeurl.com/really/</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>San Francisco</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+            </foaf:Organization>
+        </dc:publisher>
+        <dc:title>Grabby Headlines are Headed Out</dc:title>
+        <dcterms:isPartOf>
+            <bib:Part>
+                <dc:title>D</dc:title>
+                <dcterms:isPartOf rdf:resource="urn:issn:1212121212"/>
+            </bib:Part>
+        </dcterms:isPartOf>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:givenname>Daryl D</foaf:givenname>
+                        <foaf:surname>Schmidt</foaf:surname>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:pages>1-3</bib:pages>
+        <z:itemType>newspaperArticle</z:itemType>
+        <z:shortTitle>Grabby</z:shortTitle>
+    </bib:Article>
+    <bib:Newspaper rdf:about="urn:issn:1212121212">
+        <dc:identifier>ISSN 1212121212</dc:identifier>
+        <dc:title>The New Times Gazette</dc:title>
+    </bib:Newspaper>
 </rdf:RDF>

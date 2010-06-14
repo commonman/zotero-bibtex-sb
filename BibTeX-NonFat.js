@@ -2089,7 +2089,8 @@ function doExport() {
                             (item.itemType == "bookSection") || 
                             (item.itemType == "thesis") || 
                             (item.pages)) {
-                           writeField("opt_url", item.url);
+                // don't even output opt_url for BibTeX-nonfat
+                //            writeField("opt_url", item.url);
 		// otherwise we just put the url into the 'url' field           
                            } else {writeField("url", item.url);
                              }

@@ -62,7 +62,9 @@ It's also not hard to eliminate other fields like "annote", "extra" or "location
 
 ** BibTeX (Non-Fat)
 
-This makes all the modifications of Low-Fat, but goes further.  It does not export copyright ("rights"), archive location ("locaton"), "absract", "notes", "keywords", or  "extra" fields.  In other words it tries to pass on nothing but the core bibliographic metadata fields.  It may go /too/ far for many users.  But if you're having severe problems with extra data for your bibliographic style, it may be just the thing.  The changes from the "Low-Fat" version are all omissions, so they are easy enough to reverse individually by uncommenting the lines or stanzas of code that mention them.
+If the aim of "Low-Fat" was to exclude those fields which get unintentially used in citations, the aim of this style is to export only those core fields which /are/ typcially used for citation.  Therefore it does not export copyright ("rights"), archive location ("locaton"), "absract", "notes", or "keywords".  Even the "extra" field is cut.   It also does not export the opt_url field (as "Low-Fat" does for resources which look like print resources. The 'url' field is kept for non-print items which contain the field.  
+
+This of course may go /too/ far for many users, though (except for 'extra') I tried not to cut anything that was commonly used in citations for standard print resources and websites.    But if you're having severe problems with surplus data for your bibliographic style, it may be just the thing.  The changes from the "Low-Fat" version are all omissions, so they are easy enough to reverse individually by uncommenting the lines or stanzas of code that mention them.
 
 ** Proposed to Zotero
 This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt.  A patch has been submitted to Zotero-dev and is awaiting approval.
@@ -136,3 +138,4 @@ If your BibTeX output from Zotero contains fields you don't want, there are also
 I chose to tweak the Zotero export files simply because it lets me keep Zotero as my main database (rather than just as a collection tool) without having to run a postprocessor every time I export modifications to my data.  I also wanted my BibTeX database in UTF-8 encoding, which Zotero does well, but which the postprocessors at the time did not.  
 
 I have a big-ish database of 1800 items.  Since it still exports in under a minute, I just export the whole thing afresh when I want to update my BibTeX file with the latest from my Zotero database.  It keeps export to a single step.
+
