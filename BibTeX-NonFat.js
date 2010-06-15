@@ -1898,6 +1898,27 @@ function mapAccent(character) {
 	return (mappingTable[character] ? mappingTable[character] : "?");
 }
 
+// a little substitution function for BibTeX keys, where we don't want LaTeX 
+// escaping, but we do want to preserve the base characters
+
+function tidyAccents(s) {
+                        var r=s.toLowerCase();
+                        r = r.replace(new RegExp("[ä]", 'g'),"ae");
+                        r = r.replace(new RegExp("[ö]", 'g'),"oe");
+                        r = r.replace(new RegExp("[ü]", 'g'),"ue");
+                        r = r.replace(new RegExp("[àáâãå]", 'g'),"a");
+                        r = r.replace(new RegExp("æ", 'g'),"ae");
+                        r = r.replace(new RegExp("ç", 'g'),"c");
+                        r = r.replace(new RegExp("[èéêë]", 'g'),"e");
+                        r = r.replace(new RegExp("[ìíîï]", 'g'),"i");
+                        r = r.replace(new RegExp("ñ", 'g'),"n");                            
+                        r = r.replace(new RegExp("[òóôõ]", 'g'),"o");
+                        r = r.replace(new RegExp("œ", 'g'),"oe");
+                        r = r.replace(new RegExp("[ùúû]", 'g'),"u");
+                        r = r.replace(new RegExp("[ýÿ]", 'g'),"y");
+                        return r;
+                };
+
 var numberRe = /^[0-9]+/;
 // Below is a list of words that should not appear as part of the citation key
 // in includes the indefinite articles of English, German, French and Spanish, as well as a small set of English prepositions whose 
@@ -1967,7 +1988,9 @@ function buildCiteKey (item,citekeys) {
     //
     // no matter what, we want to make sure we exclude
     // " # % ' ( ) , = { } ~ and backslash
+    // however, we want to keep the base characters 
 
+    basekey = tidyAccents(basekey);
     basekey = basekey.replace(citeKeyCleanRe, "");
     var citekey = basekey;
     var i = 0;

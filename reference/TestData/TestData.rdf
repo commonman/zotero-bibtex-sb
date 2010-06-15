@@ -248,6 +248,7 @@
                 <foaf:name>Philo</foaf:name>
             </foaf:Organization>
         </dc:publisher>
+        <dc:subject>greco_rom have</dc:subject>
         <dc:title>"Licht zur Erleuchtung der Heiden und Herrlichkeit für dein Volk Israel" Studien zum lukanischen Doppelwerk</dc:title>
         <dcterms:isPartOf>
             <bib:Series>
@@ -387,6 +388,7 @@
             </dcterms:URI>
         </dc:identifier>
         <dc:rights>Normal</dc:rights>
+        <dc:subject>theory</dc:subject>
         <dc:title>Notes on Transitivity and Theme in English: Part 2</dc:title>
         <dcterms:abstract>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enimad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</dcterms:abstract>
         <dcterms:dateSubmitted>2010-03-04 23:58:13</dcterms:dateSubmitted>
@@ -421,6 +423,7 @@
     <bib:Article rdf:about="#item_159">
         <dc:date>1984</dc:date>
         <dc:subject>LIN</dc:subject>
+        <dc:subject>not_in_QML</dc:subject>
         <dc:title>El anuncio del angel y la objeción de María.</dc:title>
         <dcterms:abstract>The author applies his theory of a literary pattern for heavenly announcements of birth and mission in biblical literature to Luke's account of the annunciation (see Est Bib Ns 42 no 1-2,21-70 1984). In this article the author concentrates on the role of Mary's objection as a literary device for eliciting a reaffirmation of the message from the heavenly messenger. [tr fr j by TDS].</dcterms:abstract>
         <dcterms:isPartOf rdf:resource="urn:issn:0014-1437"/>
@@ -449,6 +452,7 @@
         <dc:identifier>
            <dcterms:URI><rdf:value>http://fakeaurl.com</rdf:value></dcterms:URI>
         </dc:identifier>
+        <dc:subject>commentary_modern</dc:subject>
         <dc:title>La distinción entre acontecimiento-base artificio literario en los relatos derásicos : Una discusión con el Prof Muñoz Iglesias en su obra "Los Evangelios de la Infancia"</dc:title>
         <dcterms:isPartOf>
             <bib:Journal>
@@ -490,6 +494,7 @@
                 </vcard:adr>
             </foaf:Organization>
         </dc:publisher>
+        <dc:subject>ignore</dc:subject>
         <dc:title>Grabby Headlines are Headed Out</dc:title>
         <dcterms:isPartOf>
             <bib:Part>

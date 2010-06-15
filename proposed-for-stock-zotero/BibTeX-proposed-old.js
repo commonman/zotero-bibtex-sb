@@ -1,7 +1,7 @@
 {
-	"translatorID":"6a956918-75c8-11df-9797-c2bfdfd72085",
+	"translatorID":"9cb70025-a888-4a29-a210-93ec52da40d4",
 	"translatorType":3,
-	"label":"BibTeX (Proposed)",
+	"label":"BibTeX",
 	"creator":"Simon Kornblith and Richard Karnesky",
 	"target":"bib",
 	"minVersion":"1.0.0b4.r1",
@@ -10,8 +10,6 @@
 	"inRepository":true,
 	"lastUpdated":"2010-05-31 18:20:00"
 }
-
-// this file is is the same as my BibTeX-proposed.js, but it has its own translator ID so I can test it alongside the existing BibTeX.js
 
 Zotero.configure("dataMode", "block");
 Zotero.addOption("exportCharset", "UTF-8");
@@ -1849,27 +1847,6 @@ function mapAccent(character) {
 	return (mappingTable[character] ? mappingTable[character] : "?");
 }
 
-// a little substitution function for BibTeX keys, where we don't want LaTeX 
-// escaping, but we do want to preserve the base characters
-
-function tidyAccents(s) {
-                        var r=s.toLowerCase();
-                        r = r.replace(new RegExp("[ä]", 'g'),"ae");
-                        r = r.replace(new RegExp("[ö]", 'g'),"ae");
-                        r = r.replace(new RegExp("[ü]", 'g'),"ue");
-                        r = r.replace(new RegExp("[àáâãå]", 'g'),"a");
-                        r = r.replace(new RegExp("æ", 'g'),"ae");
-                        r = r.replace(new RegExp("ç", 'g'),"c");
-                        r = r.replace(new RegExp("[èéêë]", 'g'),"e");
-                        r = r.replace(new RegExp("[ìíîï]", 'g'),"i");
-                        r = r.replace(new RegExp("ñ", 'g'),"n");                            
-                        r = r.replace(new RegExp("[òóôõ]", 'g'),"o");
-                        r = r.replace(new RegExp("œ", 'g'),"oe");
-                        r = r.replace(new RegExp("[ùúû]", 'g'),"u");
-                        r = r.replace(new RegExp("[ýÿ]", 'g'),"y");
-                        return r;
-                };
-
 var numberRe = /^[0-9]+/;
 // Below is a list of words that should not appear as part of the citation key
 // in includes the indefinite articles of English, German, French and Spanish, as well as a small set of English prepositions whose 
@@ -1939,9 +1916,7 @@ function buildCiteKey (item,citekeys) {
     //
     // no matter what, we want to make sure we exclude
     // " # % ' ( ) , = { } ~ and backslash
-    // however, we want to keep the base characters 
 
-    basekey = tidyAccents(basekey);
     basekey = basekey.replace(citeKeyCleanRe, "");
     var citekey = basekey;
     var i = 0;

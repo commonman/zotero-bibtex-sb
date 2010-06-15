@@ -14,11 +14,13 @@ I use [[zotero.org][Zotero]] as my bibliographic database and BibTeX (actually [
 
 Zotero's aim is to a decent job of exporting all bibliographic metadata which you can reasonably get into a not-too-idiosyncratic dialect of BibTeX.  A full, flexible BibTeX export within Zotero would introduce interface complexity which some feel would be orthogonal to Zotero's design principles.  Also such an export interface would be a decent bit bit of work for what amounts to a small (and reportedly hard to please) set of BibTeX+Zotero users (who us?).  Furthermore postprocessing your database is an ancient tradition in the BibTeX world.  Tools exist for this sort of thing.  
 
+This doesn't mean that you shouldn't feel free to start discussions about sensible defaults on the Zotero forums.  But you'll want to do so with a basic grasp of Zotero's one-size-tries-its-best approach.  
+
 ** But
 
 I couldn't find a BibTeX postprocessor that would meet all my needs.  They didn't handle Unicode BibTeX data well. They had artifacts that I didn't want, and there were some changes I wanted that they weren't designed to produce.  In addition I was glad for the simplicity of doing my whole export in one step. Needless to say there are other ways to do these things (a few are listed at the end of this page).  Follow your bliss.  This was mine.
 
-My initial aim is just to make the modifications available to anyone who might finds them useful.  I'll do my best to help you with modifications that you require, within the limits of my ability and time.  I also have included code comments and instructios below to help you in making your own modifications. 
+My initial aim is just to make the modifications available to anyone who might finds them useful.  I'll do my best to help you with modifications that you require, within the limits of my ability and time.  I also have included code comments and instructions below to help you in making your own modifications. 
 
 Feel free to contact me with any comments, questions or patches:
 
@@ -47,13 +49,17 @@ This makes the following changes from Zotero's standard BibTeX export:
   - The "pages" field is not exported for books
     (A patch for this has been submitted to the zotero-dev list.)
 
-  - The 'month' field is not exported for articles which have an issue number.  (Cf. for example Chicago Manual of Style 17.161--163).  Some styles helpfully print this if it's in your data file.  It's a way of giving the author flexibilty.  But with auto-generated data, it does the Wrong Thing.
+  - The 'month' field is not exported for articles which have an issue number.  (Cf. for example Chicago Manual of Style 17.161--163).  Some styles helpfully print this if it's in your data file.  It's a way of giving the author flexibility.  But with auto-generated data, it does the Wrong Thing.
 
 3) Other changes
 
-  - The quality of the automatically generated keys has been improved (no merged title words, better exclusion of particles from titleword field)  (A patch for this has been submitted to the Zotero dev list to improve it's normal BibTeX export.  It is awaiting testing and approval.)
+  - The quality of the automatically generated keys has been improved:
+       + No more merged title words
+       + better exclusion of English particles from start of title field (for name_TITLEWORD_year key formation) 
+       + German, French and Spanish articles added to ('the' and 'a') for exlusion from TITLEWORD
+       + Names and titles with diacriticals now receive more gentle treatment in keys(no longer: "mnguez_potica_1980", but now: "minguez_poetica_1980" for a book by "Dionisio Mínguez"  called "Poética generativa")
 
-  - Exported Zotero tags in the LaTeX 'keyword' field are no longer LaTeX escaped.  This makes them easier to read and search.  Unless you use them for LaTeX-ing, this is probably what you want too.
+  - Exported Zotero tags in the LaTeX 'keyword' field are no longer LaTeX-escaped.  This makes them easier to read and search.  If you actually typeset them you may not want this, but that's not a typical use of them, in my experience.  
 
 It's easy enough to revert these changes uncommenting the appropriate lines in the BibTeX-LowFat.js file, or by copying back the relevant bits from the stock BibTeX.js file.
 
@@ -62,29 +68,35 @@ It's also not hard to eliminate other fields like "annote", "extra" or "location
 
 ** BibTeX (Non-Fat)
 
-If the aim of "Low-Fat" was to exclude those fields which get unintentially used in citations, the aim of this style is to export only those core fields which /are/ typcially used for citation.  Therefore it does not export copyright ("rights"), archive location ("locaton"), "absract", "notes", or "keywords".  Even the "extra" field is cut.   It also does not export the opt_url field (as "Low-Fat" does for resources which look like print resources. The 'url' field is kept for non-print items which contain the field.  
+If the aim of "Low-Fat" was to exclude those fields which get unintentionally used in citations, the aim of this style is to export only those core fields which /are/ typically used for citation.  Therefore it does not export copyright ("rights"), archive location ("location"), "abstract", "notes", or "keywords".  Even the "extra" field is cut.   It also does not export the opt_url field (as "Low-Fat" does for resources which look like print resources. The 'url' field is kept for non-print items which contain the field.  
 
 This of course may go /too/ far for many users, though (except for 'extra') I tried not to cut anything that was commonly used in citations for standard print resources and websites.    But if you're having severe problems with surplus data for your bibliographic style, it may be just the thing.  The changes from the "Low-Fat" version are all omissions, so they are easy enough to reverse individually by uncommenting the lines or stanzas of code that mention them.
 
 ** Proposed to Zotero
-This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt.  A patch for these has been submitted to Zotero-dev and is awaiting approval.
+This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt. (BibTeX key improvments only, ATM)  A patch for these has been submitted to Zotero-dev and is awaiting approval.
 The file and the patch are found in the 'proposed-for-stock-zotero' directory.
+
+If people were amenable, two further changes might be made to Zotero's stock output:  removing the LaTeX escaping from the "keywords" field, and (possibly) the use of the opt_url field where print-based items also have URLs, as many will when their metadata is harvested by Zotero.  I didn't feel like wading into this controversy.
+
 * Notes
 
 The rule for exporting the URL is:  a Zotero URL goes into 'opt_url' instead of 'url' for all resources which are of the type "book", "thesis" or "book section" or for other resources which have a value in the "pages" field.  This will mostly do the right thing, but not if you catalog resources which have both a citable URL and a page range.   It does what I want. Instructions are included in the file for writing the URL to the BibTeX 'url' field (Zotero's standard behavior).
 
 Note that although I also added the import of 'opt_url' into Zotero's URL field, this won't happen automatically for you even after you install this file, since Zotero still uses its stock BibTeX translator for import.  You may have to replace that one with this.  (I haven't tested it).  Unless you do this you won't be able to re-import those URL's stored in the 'opt_url' field, so no data round-tripping.  In practice you can't expect decent data round-tripping since Zotero export to BibTeX is by nature lossy. (Zotero stores more information than BibTeX).
 
+*Use some care:*  I haven't yet been able to figure out how Zotero decides which translator to use for BibTeX *import*.  These edited copies reside in the same directory as your stock BibTeX import file, and I can't that Zotero will use its stock importer by default.  Nor do I know how to force it to use an edited one.  At the moment, this doesn't matter much, since (but for my addition of a facility to import the opt_url field) the importers are all the same.  But potential conflict this is something to be aware of if and as the Zotero stock BibTeX import/export develops.  
+ 
+
 * To Use
 Drop one of the BibTeX-xxxxxx.js files into your zotero/translators directory, which is usually within your Firefox profile.  To find out where your zotero data directory is, look in:
 
 Zotero Preferences --> Advanced  --> Show Data Directory
 
-the 'translators' directory is inside that.  When you restart Firefox, the new translator will be available in the list when you export.
+The 'translators' directory is inside that.  When you restart Firefox, the new translator will be available in the list when you export.
 
 ** Yet To Do
 
- + Add a function to ascii-ize the author's last name and title words of the key rather than just removing the non-ascii letters (which makes for ugly keys when citing names and titles that have diacriticals).
+ + +Add a function to ascii-ize the author's last name and title words of the key rather than just removing the non-ascii letters (which makes for ugly keys when citing names and titles that have diacriticals).+
 
  + Add the ability to specify what fields do/don't get exported as a variable at the top of the file
 
@@ -101,11 +113,11 @@ These files consist only of modified versions of Zotero's standard BibTeX export
 
 Of course if you do this, you should keep good backups of your Zotero data.  Nothing should happen during export to corrupt your data normally, but *be warned*.  Neither I nor (especially) the Zotero developers take responsibility for your data in any case.  We take even less if take things into your own hands.  There.
 
-If you want to make your own BibTeX exporter (as opposed to modifying mine), do this:
+If you want to make your own BibTeX exporter which will show up separately in the export list in Zotero (as opposed to modifying this one), do this:
 
 (1) Start with the stock BibTeX.js file, or my BibTeX-LowFat.js (which at the moment is better commented)
 
-(2) In a decent editor, change the "label" in the header to a name you like.
+(2) In a decent editor, change the "label" in the header to a name you like:  (e.g. "BibTeX (My Prefs)").
 
 (3) Generate a unique GUID for the 'translatorID' field.  Possibly online at a site like [[http://createguid.com/][Create GUID]].  This is just a unique-in-the-history-of-the-world number so that your translator doesn't get confused with anyone else's.
 
@@ -129,7 +141,7 @@ If your BibTeX output from Zotero contains fields you don't want, there are also
 
 (1) Use a BibTeX style which just ignores the extra fields and does the right thing.  Some BibTeX files automatically ignore the 'month' field for journal articles, for example, if it's not necessary for citation.  You may be able to use such a style or to modify your existing BibTeX style so that it doesn't use the fields you don't want.  This is less possible for citation styles which leave considerable control in the hands of the author and editor (e.g. Chicago notes), because those require that the author be able to make such decisions based his or her sense of what is required for the citation of any individual resource.  Of course if that is the case postprocessors and this exporter won't be of much help either.  
 
-(2) Postprocess your BibTeX files using a text editor, a BibTeX reference manager like [[http://jabref.sourceforge.net/][JabRef]], a scripting language (Perl, bash, python or sed) or a dedicated BibTeX postprocessor like [[http://www.gerd-neugebauer.de/software/TeX/BibTool/]['bibtool']] or the new [[http://www.bulheller.com/bibtexformat.html]['bibtexformat']].    
+(2) Postprocess your BibTeX files using a text editor, a BibTeX reference manager like [[http://jabref.sourceforge.net/][JabRef]], a scripting language (Perl, bash, python or sed) or a dedicated BibTeX postprocessor like [[http://www.gerd-neugebauer.de/software/TeX/BibTool/]['bibtool']] or the new [[http://www.bulheller.com/bibtexformat.html]['bibtexformat']].  These last two are particularly recommended. Bibtool is a venerable old thing which is higly flexible, and has recently seen a few bugs fixed by its author.  It will not handle UTF-8 BibTeX though, whatever you do.  BibTeXlformat is a newer project written in perl which does a fewer number of transformations, but is well documented and currently in development.  It does not handle UTF-8 BibTeX either, but its author assures me (June 2010) that this limitation will dissapear with the next release.  He also plans to offer an ability to remove fields based on item types.  
 
 (3) If you use [[http://www.lyx.org][LyX]] for writing LaTeX, check out the new Firefox plugin  [[https://addons.mozilla.org/en-US/firefox/addon/56806/][LyZ]], which maintains a BibTeX based of the works cited in a particular LyX document.
 
