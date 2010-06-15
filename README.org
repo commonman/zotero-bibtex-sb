@@ -4,7 +4,18 @@
 
 An attempt to improve on Zotero's standard BibTeX export, at least for my own purposes.
 
-This repository includes one or more BibTeX export translators which you can drop into your zotero/translators folder and use to export BibTeX.  This is easy enough to do, and keeps Zotero's existing BibTeX intact.
+This repository includes a few modified BibTeX export translators which you can drop into your zotero/translators folder and use to export BibTeX.  This is easy enough to do, and keeps Zotero's existing BibTeX intact.
+
+** Quickstart
+
+Download one of these and throw it into your zotero/translators directory.  Restart firefox.  When you got to export, you'll see it offered as a possibility.
+
+
+  +  [[http://github.com/commonman/zotero-bibtex-sb/raw/master/BibTeX-LowFat.js][BibTeX-LowFat.js]] (omits several fields (URL, ISBN, etc) which you might not want your over-eager BibTeX style to put in your citations/bibliography)
+
+  +  [[http://github.com/commonman/zotero-bibtex-sb/raw/master/BibTeX-NonFat.js][BibTeX-NonFat.js]] (omits all but the essential fields, no notes, no keywords, no abstract, nix)
+
+See below for more detail.
 
 ** Why do this?
 
@@ -45,7 +56,7 @@ This makes the following changes from Zotero's standard BibTeX export:
 
 2)  Some fields are exported only under certain conditions:
 
-  - For any resources suspected of being primarily print-based, the URL is written to the BibTeX output to an 'opt_url' field instead of a 'url' field.  This is to prevent BibTeX styles from adding the URL to citations of such resources, thus following the conventions of those quaint backwaters where words are still "printed" onto processed wood pulp.   We still liberally output the URL (to the BibTeX 'url' field) for other resource types, and for journal articles with no page reference given.  See "Notes" below for more. 
+  - For any resources suspected of being primarily print-based, the URL is written to an 'opt_url' field instead of a 'url' field.  This is to prevent BibTeX styles from adding the URL to citations of such resources, thus following the conventions of those quaint backwaters where words are still "printed" onto processed wood pulp, and citations are typically made to paper publications with no "U-R-L" thingy.  The exporter still writes the URL (to the BibTeX 'url' field) for other resource types, and for journal articles with no page reference given.  See "Notes" below for more. 
 
   - The "pages" field is not exported for books
     (A patch for this has been submitted to the zotero-dev list.)
@@ -55,14 +66,14 @@ This makes the following changes from Zotero's standard BibTeX export:
 3) Other changes
 
   - The quality of the automatically generated keys has been improved:
-       + No more merged title words
-       + better exclusion of English particles from start of title field (for name_TITLEWORD_year key formation) 
-       + German, French and Spanish articles added to ('the' and 'a') for exclusion from TITLEWORD
-       + Names and titles with diacriticals now receive more gentle treatment in keys(no longer: "mnguez_potica_1980", but now: "minguez_poetica_1980" for a book by "Dionisio Mínguez"  called "Poética generativa")
+       + No more merged title words 
+       + better exclusion of English particles from start of title field (for "name_TITLEWORD_year" key formation) 
+       + German, French and Spanish articles added to the list of words excluded from TITLEWORD
+       + Names and titles with diacriticals now receive more gentle treatment in keys (no longer: "mnguez_potica_1980", but now: "minguez_poetica_1980" for a book by "Dionisio Mínguez"  called "Poética generativa")
 
   - Exported Zotero tags in the LaTeX 'keyword' field are no longer LaTeX-escaped.  This makes them easier to read and search.  If you actually typeset them you may not want this, but that's not a typical use of them, in my experience.  
 
-It's easy enough to revert these changes uncommenting the appropriate lines in the BibTeX-LowFat.js file, or by copying back the relevant bits from the stock BibTeX.js file.
+It's easy enough to revert these changes individually by uncommenting the appropriate lines in the BibTeX-LowFat.js file, or by copying back the relevant bits from the stock BibTeX.js file.
 
 It's also not hard to eliminate other fields like "annote", "extra" or "location".  Just look at the examples in the code.  Even you can probably do it. :-)
 
@@ -74,7 +85,7 @@ If the aim of "Low-Fat" was to exclude those fields which get unintentionally us
 This of course may go /too/ far for many users, though (except for 'extra') I tried not to cut anything that was commonly used in citations for standard print resources and websites.    But if you're having severe problems with surplus data for your bibliographic style, it may be just the thing.  The changes from the "Low-Fat" version are all omissions, so they are easy enough to reverse individually by uncommenting the lines or stanzas of code that mention them.
 
 ** Proposed to Zotero
-This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt. (BibTeX key improvements only, ATM)  A patch for these has been submitted to Zotero-dev and is awaiting approval.
+This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt. (BibTeX key improvements and the removal of the "pages" field from @book items, ATM)  A patch for these has been submitted to Zotero-dev and is awaiting approval.
 The file and the patch are found in the 'proposed-for-stock-zotero' directory.
 
 If people were amenable, two further changes might be made to Zotero's stock output:  removing the LaTeX escaping from the "keywords" field, and (possibly) the use of the opt_url field where print-based items also have URLs, as many will when their metadata is harvested by Zotero.  I didn't feel like wading into this controversy.
