@@ -16,7 +16,7 @@ Zotero's aim is to a decent job of exporting all bibliographic metadata which yo
 
 This doesn't mean that you shouldn't feel free to start discussions about sensible defaults on the Zotero forums.  But you'll want to do so with a basic grasp of Zotero's one-size-tries-its-best approach.  
 
-** But
+** But 
 
 I couldn't find a BibTeX postprocessor that would meet all my needs.  They didn't handle Unicode BibTeX data well. They had artifacts that I didn't want, and there were some changes I wanted that they weren't designed to produce.  In addition I was glad for the simplicity of doing my whole export in one step. Needless to say there are other ways to do these things (a few are listed at the end of this page).  Follow your bliss.  This was mine.
 
@@ -57,7 +57,7 @@ This makes the following changes from Zotero's standard BibTeX export:
   - The quality of the automatically generated keys has been improved:
        + No more merged title words
        + better exclusion of English particles from start of title field (for name_TITLEWORD_year key formation) 
-       + German, French and Spanish articles added to ('the' and 'a') for exlusion from TITLEWORD
+       + German, French and Spanish articles added to ('the' and 'a') for exclusion from TITLEWORD
        + Names and titles with diacriticals now receive more gentle treatment in keys(no longer: "mnguez_potica_1980", but now: "minguez_poetica_1980" for a book by "Dionisio Mínguez"  called "Poética generativa")
 
   - Exported Zotero tags in the LaTeX 'keyword' field are no longer LaTeX-escaped.  This makes them easier to read and search.  If you actually typeset them you may not want this, but that's not a typical use of them, in my experience.  
@@ -74,7 +74,7 @@ If the aim of "Low-Fat" was to exclude those fields which get unintentionally us
 This of course may go /too/ far for many users, though (except for 'extra') I tried not to cut anything that was commonly used in citations for standard print resources and websites.    But if you're having severe problems with surplus data for your bibliographic style, it may be just the thing.  The changes from the "Low-Fat" version are all omissions, so they are easy enough to reverse individually by uncommenting the lines or stanzas of code that mention them.
 
 ** Proposed to Zotero
-This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt. (BibTeX key improvments only, ATM)  A patch for these has been submitted to Zotero-dev and is awaiting approval.
+This is a version with what I think are uncontroversial changes which the stock Zotero BibTeX export could usefully adopt. (BibTeX key improvements only, ATM)  A patch for these has been submitted to Zotero-dev and is awaiting approval.
 The file and the patch are found in the 'proposed-for-stock-zotero' directory.
 
 If people were amenable, two further changes might be made to Zotero's stock output:  removing the LaTeX escaping from the "keywords" field, and (possibly) the use of the opt_url field where print-based items also have URLs, as many will when their metadata is harvested by Zotero.  I didn't feel like wading into this controversy.
@@ -155,11 +155,11 @@ If your BibTeX output from Zotero contains fields you don't want, there are also
 
 (1) *Use a BibTeX style which just ignores the extra fields* and does the right thing--if such a style exists for you.  Some BibTeX files automatically ignore the 'month' field for journal articles, for example, if it's not necessary for citation.  You may be able to use such a style or to modify your existing BibTeX style so that it doesn't use the fields you don't want.  This is less possible for citation styles which leave considerable control in the hands of the author and editor (e.g. Chicago notes), because those require that the author be able to make such decisions based his or her sense of what is required for the citation of any individual resource.  Of course if you need that level of flexibility then postprocessors and this exporter won't be of much help either.  You'll need to find a style that lets you specify inclusions and omissions on a per-citation basis (biblatex-chicago-notes-df will add some of this kind of capability), or else you'll be stuck maintaining a BibTeX database by more manual means.  
 
-(2) *Postprocess your BibTeX files* using a text editor, a BibTeX reference manager like [[http://jabref.sourceforge.net/][JabRef]], a scripting language (Perl, bash, python or sed) or a dedicated BibTeX postprocessor like [[http://www.gerd-neugebauer.de/software/TeX/BibTool/]['bibtool']] or the new [[http://www.bulheller.com/bibtexformat.html]['bibtexformat']].  These last two are particularly recommended. Bibtool is a venerable old thing which is higly flexible.  It will not handle UTF-8 BibTeX though, whatever you do.  BibTeXformat is a newer project written in perl which does a smaller number of transformations, but is well-documented and currently in active development.  It does not handle UTF-8 BibTeX either, but its author assures me (June 2010) that this limitation will dissapear with the next release.  He also plans to offer an ability to remove fields based on item types.  
+(2) *Postprocess your BibTeX files* using a text editor, a BibTeX reference manager like [[http://jabref.sourceforge.net/][JabRef]], a scripting language (Perl, bash, python or sed) or a dedicated BibTeX postprocessor like [[http://www.gerd-neugebauer.de/software/TeX/BibTool/]['bibtool']] or the new [[http://www.bulheller.com/bibtexformat.html]['bibtexformat']].  These last two are particularly recommended. Bibtool is a venerable old thing which is highly flexible.  It will not handle UTF-8 BibTeX though, whatever you do.  BibTeXformat is a newer project written in Perl which does a smaller number of transformations, but is well-documented and currently in active development.  It does not handle UTF-8 BibTeX either, but its author assures me (June 2010) that this limitation will disappear with the next release.  He also plans to offer an ability to remove fields based on item types.  
 
 (3) If you use [[http://www.lyx.org][LyX]] for writing LaTeX, check out the new Firefox plugin  [[https://addons.mozilla.org/en-US/firefox/addon/56806/][LyZ]], which maintains a BibTeX based of the works cited in a particular LyX document.
 
-(4) [[http://www.mendeley.com/][Mendeley]]http://github.com/commonman/zotero-bibtex-sb has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you may have limited control over the BibTeX export Of course you can still make a copy of your BibTeX database and postprocess it (2).
+(4) [[http://www.mendeley.com/][Mendeley]] has the ability to automatically update its own database based on your Zotero collection (read-only) and to keep a BibTeX file up-to-date with exports from that collection.  Though since Mendeley is a closed-source program you may have limited control over the BibTeX export Of course you can still make a copy of your BibTeX database and postprocess it (2).
 
 I chose to tweak the Zotero export files simply because it lets me keep Zotero as my main database (rather than just as a collection tool) without having to run a postprocessor every time I export modifications to my data.  I also wanted my BibTeX database in UTF-8 encoding, which Zotero does well, but which the postprocessors at the time did not.  
 
