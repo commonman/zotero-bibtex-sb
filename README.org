@@ -28,6 +28,7 @@ Feel free to contact me with any comments, questions or patches:
 
 * The BibTeX Exporters
 
+At the moment, there are two.  You can see sample BibTeX database output, and compare them with each other and Zotero's stock export by comparing the sample output files in the 'reference' directory of this repository.  Either download the "raw" files from their page or download the whole repository via the download link in the upper right (or, of course, git). 
 ** BibTeX (Low-Fat)
 
 This makes the following changes from Zotero's standard BibTeX export:
@@ -88,11 +89,24 @@ Note that although I also added the import of 'opt_url' into Zotero's URL field,
  
 
 * To Use
-Drop one of the BibTeX-xxxxxx.js files into your zotero/translators directory, which is usually within your Firefox profile.  To find out where your zotero data directory is, look in:
+
+ Download one of the BibTeX-xxxxx.js files.  At the moment there are two:
+
+  +  [[http://github.com/commonman/zotero-bibtex-sb/raw/master/BibTeX-LowFat.js][BibTeX-LowFat.js]]
+
+  +  [[http://github.com/commonman/zotero-bibtex-sb/raw/master/BibTeX-NonFat.js][BibTeX-NonFat.js]]
+
+Alternately you can clone the repository, which contains proposed patches for Zotero, test data, and sample outputs for each of the exporters.  
+
+ : git clone git@github.com:commonman/zotero-bibtex-sb.git
+
+
+Then, drop your choice of BibTeX-xxxxxx.js files into your zotero/translators directory, which is usually within your Firefox profile.  To find out where your zotero data directory is, look in:
 
 Zotero Preferences --> Advanced  --> Show Data Directory
 
-The 'translators' directory is inside that.  When you restart Firefox, the new translator will be available in the list when you export.
+The 'translators' directory is inside that.  When you restart Firefox, the new translator will be available when you export.
+
 
 ** Yet To Do
 
